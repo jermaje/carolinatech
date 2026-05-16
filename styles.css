@@ -316,67 +316,44 @@ footer { background: var(--surface); border-top: 1px solid var(--border); paddin
 
 .faq-answer.open { max-height: 300px; padding: 0 24px 20px; }
 
-/* FLOATING ACTION BUTTON (FAB) */
-.fab-wrapper {
+/* FLOATING CHAT BUTTONS */
+.floating-socials {
   position: fixed; bottom: 28px; right: 28px; z-index: 999;
-  display: flex; flex-direction: column; align-items: flex-end; gap: 16px;
-}
-
-.fab-menu {
-  display: flex; flex-direction: column; gap: 12px; align-items: flex-end;
-  opacity: 0; transform: translateY(20px) scale(0.9); pointer-events: none;
-  transition: opacity 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.fab-wrapper.active .fab-menu {
-  opacity: 1; transform: translateY(0) scale(1); pointer-events: all;
+  display: flex; flex-direction: column; gap: 14px;
 }
 
 .fs-btn {
-  display: flex; align-items: center; gap: 12px; color: #fff;
-  padding: 12px 18px; border-radius: 50px;
+  display: flex; align-items: center; gap: 10px; color: #fff;
+  padding: 14px 20px; border-radius: 50px;
   text-decoration: none; font-family: var(--font-mono); font-size: 13px; font-weight: 600;
   transition: transform 0.2s, box-shadow 0.2s;
+  animation: waPop 0.6s 1.5s ease both;
+  position: relative;
 }
+
 .fs-btn:hover { transform: translateY(-3px) scale(1.04); }
 
-.wa-btn { background: #25D366; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
-.wa-btn:hover { box-shadow: 0 6px 20px rgba(37,211,102,0.4); }
+.wa-btn { background: #25D366; box-shadow: 0 4px 24px rgba(37,211,102,0.4); }
+.wa-btn:hover { box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
 
-.viber-btn { background: #7360f2; box-shadow: 0 4px 15px rgba(115,96,242,0.3); }
-.viber-btn:hover { box-shadow: 0 6px 20px rgba(115,96,242,0.4); }
+.viber-btn { background: #7360f2; box-shadow: 0 4px 24px rgba(115,96,242,0.4); animation-delay: 1.6s; }
+.viber-btn:hover { box-shadow: 0 8px 32px rgba(115,96,242,0.5); }
 
-.sms-btn { background: #007aff; box-shadow: 0 4px 15px rgba(0,122,255,0.3); }
-.sms-btn:hover { box-shadow: 0 6px 20px rgba(0,122,255,0.4); }
+.sms-btn { background: #007aff; box-shadow: 0 4px 24px rgba(0,122,255,0.4); animation-delay: 1.7s; }
+.sms-btn:hover { box-shadow: 0 8px 32px rgba(0,122,255,0.5); }
+
+.fs-pulse {
+  position: absolute; top: -4px; right: -4px;
+  width: 14px; height: 14px; background: var(--accent2);
+  border-radius: 50%; border: 2px solid var(--bg);
+  animation: waPulse 2s infinite;
+}
 
 .fs-icon { display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; }
 .fs-icon svg { width: 100%; height: 100%; }
 
-.fab-toggle {
-  width: 60px; height: 60px; border-radius: 50%;
-  background: var(--accent); color: #000; border: none;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; box-shadow: 0 4px 20px rgba(0,198,255,0.4);
-  transition: transform 0.3s ease, background 0.3s ease;
-  position: relative;
-}
-
-.fab-toggle:hover { transform: scale(1.05); background: var(--accent2); }
-
-.fab-toggle svg { position: absolute; width: 24px; height: 24px; transition: transform 0.3s ease, opacity 0.3s ease; }
-.fab-toggle .icon-chat { opacity: 1; transform: rotate(0) scale(1); }
-.fab-toggle .icon-close { opacity: 0; transform: rotate(-90deg) scale(0.5); }
-
-.fab-wrapper.active .fab-toggle .icon-chat { opacity: 0; transform: rotate(90deg) scale(0.5); }
-.fab-wrapper.active .fab-toggle .icon-close { opacity: 1; transform: rotate(0) scale(1); }
-
-.fs-pulse {
-  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  border-radius: 50%; border: 2px solid var(--accent);
-  animation: waPulse 2s infinite; pointer-events: none;
-}
-
-@keyframes waPulse { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.4); opacity: 0; } }
+@keyframes waPop { from{opacity:0;transform:scale(0.7) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
+@keyframes waPulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:0.6} }
 
 @media(max-width:768px){
   nav{padding:14px 20px}
@@ -392,8 +369,7 @@ footer { background: var(--surface); border-top: 1px solid var(--border); paddin
   section{padding:60px 20px}
   .stats-bar{padding:20px}
   footer{padding:20px;flex-direction:column;text-align:center}
-  .fab-wrapper { bottom: 20px; right: 16px; gap: 12px; }
+  .floating-socials { bottom: 20px; right: 16px; gap: 12px; }
   .fs-text { display: none; }
   .fs-btn { padding: 14px; border-radius: 50%; justify-content: center; }
-  .fab-toggle { width: 54px; height: 54px; }
 }
