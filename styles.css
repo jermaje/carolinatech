@@ -339,6 +339,9 @@ footer { background: var(--surface); border-top: 1px solid var(--border); paddin
 .viber-btn { background: #7360f2; box-shadow: 0 4px 24px rgba(115,96,242,0.4); animation-delay: 1.6s; }
 .viber-btn:hover { box-shadow: 0 8px 32px rgba(115,96,242,0.5); }
 
+.sms-btn { background: #007aff; box-shadow: 0 4px 24px rgba(0,122,255,0.4); animation-delay: 1.7s; }
+.sms-btn:hover { box-shadow: 0 8px 32px rgba(0,122,255,0.5); }
+
 .fs-pulse {
   position: absolute; top: -4px; right: -4px;
   width: 14px; height: 14px; background: var(--accent2);
