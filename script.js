@@ -195,23 +195,7 @@ tabBtns.forEach(btn => {
       } else {
         card.style.display = 'none';
         card.style.animation = 'none';
+      }
     });
   });
 });
-
-// Floating Socials Toggle
-const fsToggleBtn = document.getElementById('fsToggleBtn');
-const floatingSocials = document.getElementById('floatingSocials');
-
-if (fsToggleBtn && floatingSocials) {
-  fsToggleBtn.addEventListener('click', () => {
-    floatingSocials.classList.toggle('open');
-  });
-
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!floatingSocials.contains(e.target)) {
-      floatingSocials.classList.remove('open');
-    }
-  });
-}
