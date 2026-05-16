@@ -195,7 +195,23 @@ tabBtns.forEach(btn => {
       } else {
         card.style.display = 'none';
         card.style.animation = 'none';
-      }
     });
   });
 });
+
+// FAB Toggle Logic
+const fabToggle = document.getElementById('fabToggle');
+const fabWrapper = document.getElementById('fabWrapper');
+
+if (fabToggle && fabWrapper) {
+  fabToggle.addEventListener('click', () => {
+    fabWrapper.classList.toggle('active');
+  });
+
+  // Close FAB menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!fabWrapper.contains(e.target)) {
+      fabWrapper.classList.remove('active');
+    }
+  });
+}
