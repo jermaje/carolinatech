@@ -299,7 +299,9 @@ const estimatorData = {
     { id: 'n_setup', name: 'Router & Network Switch Config', price: 1500, desc: 'IP subnet division, DHCP setup, VLANs, switch configurations, and firewalls.', negotiable: true },
     { id: 'n_cable', name: 'Structured Cabling (per Node)', price: 600, hasQty: true, desc: 'Cat5e/Cat6 neat routing, patch panel terminations, and connectivity testing. Cables/materials are separate.', negotiable: true },
     { id: 'n_wifi', name: 'Wi-Fi Mesh & Access Point Setup', price: 1000, desc: 'Eliminate dead zones, configure mesh nodes, and wireless channel tuning.' },
-    { id: 'n_office', name: 'Office Workstation Printer Sharing', price: 2000, desc: 'Workstation network setup, central printer sharing, and file server links.', negotiable: true }
+    { id: 'n_office', name: 'Office Workstation Printer Sharing', price: 2000, desc: 'Workstation network setup, central printer sharing, and file server links.', negotiable: true },
+    { id: 'n_sysadmin', name: 'Systems & Cloud Administration', price: 3000, desc: 'Active Directory domain setup, GPO server configurations, and Microsoft 365 environment setup.', negotiable: true },
+    { id: 'n_livestream', name: 'Livestreaming & AV Configuration', price: 2500, desc: 'OBS Studio optimization, audio/video interface routing, and stream configuration.', negotiable: true }
   ]
 };
 
@@ -738,6 +740,18 @@ const serviceDetailsData = {
     price: "₱2,000 - ₱5,000+",
     desc: "Complete business workspace design. We wire networks, setup computers, configure printers for local sharing, and link central databases.",
     checklist: ["Desktop network integrations", "Office file sharing setups", "Network printer sharing", "Central backup storage configuration"]
+  },
+  "systems & cloud administration": {
+    time: "1-3 Days (Site Based)",
+    price: "₱3,000 (Base Labor)",
+    desc: "Centralized server and user environment setup. Configuration of Active Directory Domain Services, Group Policies (GPO), shared storage permissions, and Microsoft 365 migrations.",
+    checklist: ["Active Directory installation & configuration", "Group Policy (GPO) security & access setup", "M365 email migration & tenant setup", "Central database & share folder controls", "Remote administrative tools setup"]
+  },
+  "livestreaming & av configuration": {
+    time: "Same-Day / Event-Based",
+    price: "₱2,500 (Base Labor)",
+    desc: "Professional setup and optimization of livestreaming environments for virtual events, webinars, churches, or content creators. Includes OBS Studio setup, audio mixer routing, and multi-camera inputs.",
+    checklist: ["OBS Studio scene & source configuration", "Audio-visual hardware mixer integration", "Camera capture cards & sound interface routing", "Stream bitrates & encoder settings optimization", "Youtube/Facebook live key integration"]
   }
 };
 
