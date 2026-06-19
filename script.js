@@ -32,9 +32,9 @@ if (mobileMenuBtn) {
 function updateActiveNav() {
   const sections = document.querySelectorAll('section, [id]');
   const navLinks = document.querySelectorAll('.nav-links a');
-  
+
   let currentSection = '';
-  
+
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     if (window.scrollY >= sectionTop - 200) {
@@ -76,37 +76,37 @@ function toggleFaq(btn) {
 // Form Submit Handler with validation and Web3Forms integration
 async function handleSubmit(e) {
   e.preventDefault(); // Prevent page reload
-  
+
   const form = e.target;
   const nameInput = form.querySelector('#name');
   const emailInput = form.querySelector('#email');
   const btn = form.querySelector('.submit-btn');
-  
+
   // Basic validation
   if (!nameInput.value.trim()) {
     nameInput.focus();
     return false;
   }
-  
+
   if (emailInput.value && !emailInput.value.includes('@')) {
     emailInput.focus();
     return false;
   }
-  
+
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  
+
   // Prepare form data for Web3Forms
   const formData = new FormData(form);
-  
+
   try {
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formData
     });
-    
+
     const data = await response.json();
-    
+
     if (data.success) {
       btn.textContent = '✓ Message Sent!';
       btn.style.background = '#28ca42';
@@ -120,7 +120,7 @@ async function handleSubmit(e) {
     btn.textContent = '❌ Error Sending';
     btn.style.background = '#ff5f57';
   }
-  
+
   // Reset button state after a delay
   setTimeout(() => {
     btn.textContent = 'Send Message →';
@@ -151,7 +151,7 @@ const counterObs = new IntersectionObserver(entries => {
           const count = +counter.innerText;
           const speed = 150;
           const inc = target / speed;
-          
+
           if (count < target) {
             counter.innerText = Math.ceil(count + inc);
             setTimeout(updateCount, 15);
@@ -208,11 +208,11 @@ serviceCards.forEach(card => {
     if (select) {
       let matched = false;
       const cleanCardText = serviceName.toLowerCase().replace(/[^a-z0-9]/g, '');
-      
+
       for (let i = 0; i < select.options.length; i++) {
         const option = select.options[i];
         const cleanOptText = option.textContent.toLowerCase().replace(/[^a-z0-9]/g, '');
-        
+
         if (cleanOptText.includes(cleanCardText) || cleanCardText.includes(cleanOptText)) {
           select.selectedIndex = i;
           matched = true;
@@ -223,7 +223,7 @@ serviceCards.forEach(card => {
         select.value = "";
       }
     }
-    
+
     // Smooth scroll to contact form
     const contactSection = document.getElementById('contact');
     if (contactSection) {
