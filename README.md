@@ -48,4 +48,4 @@ To receive emails from the contact form, you need to add your own Web3Forms acce
 
 ## 📄 License
 
-This project is created for Carolina Technician. All rights reserved.
+This project is created by Jerson Jemenez. All rights reserved.
