@@ -729,7 +729,7 @@ const serviceDetailsData = {
     desc: "Neat routing of Cat5e/Cat6 network links inside walls, conduits, or trays. Includes patch panel terminations and faceplate jack fittings.",
     checklist: ["Cat5e/Cat6 cable deployment", "Patch panel terminations", "Neat routing & zip-tying", "Fluke patch cable node testing"]
   },
-  "wi-fi troubleshooting & optimization": {
+  "wifi troubleshooting & optimization": {
     time: "Same-Day (2-3 Hours)",
     price: "₱1,000",
     desc: "Diagnose connection drops, slow speed, and dead spots. Configure mesh systems and wireless channels to cover the entire property.",
