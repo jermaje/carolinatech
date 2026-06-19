@@ -199,3 +199,36 @@ tabBtns.forEach(btn => {
     });
   });
 });
+
+// Clickable Service Cards Navigation & Selection
+serviceCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const serviceName = card.querySelector('.service-name').textContent.trim();
+    const select = document.getElementById('service');
+    if (select) {
+      let matched = false;
+      const cleanCardText = serviceName.toLowerCase().replace(/[^a-z0-9]/g, '');
+      
+      for (let i = 0; i < select.options.length; i++) {
+        const option = select.options[i];
+        const cleanOptText = option.textContent.toLowerCase().replace(/[^a-z0-9]/g, '');
+        
+        if (cleanOptText.includes(cleanCardText) || cleanCardText.includes(cleanOptText)) {
+          select.selectedIndex = i;
+          matched = true;
+          break;
+        }
+      }
+      if (!matched) {
+        select.value = "";
+      }
+    }
+    
+    // Smooth scroll to contact form
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
