@@ -232,3 +232,22 @@ serviceCards.forEach(card => {
   });
 });
 
+// Floating Action Button (FAB) Menu Toggle Logic
+const fsTrigger = document.getElementById('fsTrigger');
+const floatingSocials = document.getElementById('floatingSocials');
+
+if (fsTrigger && floatingSocials) {
+  fsTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    floatingSocials.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside the FAB component
+  document.addEventListener('click', (e) => {
+    if (!floatingSocials.contains(e.target)) {
+      floatingSocials.classList.remove('active');
+    }
+  });
+}
+
+
