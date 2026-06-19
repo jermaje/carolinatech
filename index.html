@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carolina Technician – IT & Computer Services | Naga City</title>
-  <meta name="description" content="Carolina Technician provides trusted computer repair, CCTV installation, networking, and IT services in Brgy. Carolina, Naga City.">
+  <meta name="description"
+    content="Carolina Technician provides trusted computer repair, CCTV installation, networking, and IT services in Brgy. Carolina, Naga City.">
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,700,800&display=swap" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
@@ -25,6 +26,10 @@
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
+      <span class="theme-icon sun-icon"><i data-lucide="sun"></i></span>
+      <span class="theme-icon moon-icon"><i data-lucide="moon"></i></span>
+    </button>
     <a href="#contact" class="nav-cta">Book a Service →</a>
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
       <span></span>
@@ -48,7 +53,7 @@
       <h1>Your Trusted<br /><em>IT Technician</em><br />in <span class="yl">Naga City</span></h1>
       <p class="hero-desc">Computer repair, CCTV installation, networking, cabling, and complete office IT setup —
         Carolina Technician delivers reliable tech solutions for homes and businesses in Camarines Sur.</p>
-      
+
       <div class="hero-features">
         <div class="h-feature-card">
           <div class="hf-icon-wrapper purple"><i data-lucide="clipboard-check"></i></div>
@@ -283,6 +288,32 @@
             </div>
           </li>
         </ul>
+
+        <!-- SERVICE AREA CHECKER -->
+        <div class="area-checker reveal">
+          <span class="ac-title">📍 Service Area Checker</span>
+          <p class="ac-desc">Enter your Naga City barangay to see if we offer direct on-site visits:</p>
+          <div class="ac-input-row">
+            <input type="text" id="areaInput" placeholder="e.g. Pacol, San Felipe, Carolina..." list="barangayList"
+              autocomplete="off" />
+            <datalist id="barangayList">
+              <option value="Carolina"></option>
+              <option value="Pacol"></option>
+              <option value="San Felipe"></option>
+              <option value="Cararayan"></option>
+              <option value="Concepcion Grande"></option>
+              <option value="Concepcion Pequeña"></option>
+              <option value="Del Rosario"></option>
+              <option value="Dayangdang"></option>
+              <option value="Balatas"></option>
+              <option value="Magsaysay"></option>
+              <option value="Panicuason"></option>
+              <option value="San Isidro"></option>
+            </datalist>
+            <button id="checkAreaBtn" class="ac-btn">Check Area</button>
+          </div>
+          <div id="checkerResult" class="ac-result"></div>
+        </div>
       </div>
       <div class="reveal">
         <div class="terminal-box">
@@ -316,6 +347,249 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials">
+    <div class="section-tag reveal">// customer love</div>
+    <h2 class="section-title reveal">What Our Clients Say</h2>
+    <p class="section-sub reveal">Real feedback from homes and small businesses in Naga City.</p>
+
+    <div class="testimonials-slider-container reveal">
+      <button class="slider-btn prev-btn" id="slidePrev" aria-label="Previous testimonials">&#8592;</button>
+
+      <div class="testimonials-track" id="testimonialsTrack">
+        <!-- Card 1 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar purple">JS</div>
+            <div>
+              <div class="testi-name">Jerome S.</div>
+              <div class="testi-location">Brgy. Pacol, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Grabe an bagal kan laptop ko dati, pirmi pang nagha-hang. Pinadara ko digdi sa
+            CarolinaTECH Technician tapos in-upgrade ninda sa SSD. Ngonian murayday na maray, garo bagong bakal!"</p>
+          <span class="testi-tag">Computer Upgrade</span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar emerald">MK</div>
+            <div>
+              <div class="testi-name">Maria K.</div>
+              <div class="testi-location">Brgy. Carolina, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Magayon an pagka-install kan CCTV sa tindahan mi kan CarolinaTECH Technician. Malinig
+            an wiring, mayong nakakalaylay na kable. Mas nagustuhan ko ta na-set up man sa phone ko kaya nababantayan ko
+            maski hain ako."</p>
+          <span class="testi-tag">CCTV Installation</span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar blue">MT</div>
+            <div>
+              <div class="testi-name">Mark T.</div>
+              <div class="testi-location">Magsaysay Ave, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Sakit mi talaga duman sa opisina su Wi-Fi na pirmi na sanang nagdidiskonekta. Pwera
+            biro, kan pig-mesh network kan CarolinaTECH Technician, solve an problema! Daing hassle ngonian."</p>
+          <span class="testi-tag">Wi-Fi Optimization</span>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar purple">SL</div>
+            <div>
+              <div class="testi-name">Sarah L.</div>
+              <div class="testi-location">Brgy. San Felipe, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Nabasag ko screen kan cellphone ko tapos malapit na man magadan battery. Nadara ko
+            digdi sa CarolinaTECH Technician, wala pang 2 hours gibo na dayon. Mas nakakatipid kumpara sa iba!"</p>
+          <span class="testi-tag">Cellphone Repair</span>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar emerald">DC</div>
+            <div>
+              <div class="testi-name">David C.</div>
+              <div class="testi-location">Brgy. Del Rosario, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Salamat na maray sa pagka-setup kan workstations asin printer sa opisina mi kan
+            CarolinaTECH Technician. Solidong trabaho, mayo ka nang hahanapon pa. Daing ribok, madaling kausap."</p>
+          <span class="testi-tag">Office IT Setup</span>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar blue">ER</div>
+            <div>
+              <div class="testi-name">Elena R.</div>
+              <div class="testi-location">Brgy. Concepcion Grande, Naga</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Naghahanap ako ki murang lisensya para sa Windows 11 saka MS Office kan laptop ko.
+            Tinabangan ako kan CarolinaTECH Technician mag-activate. Dawa titser ako, daing ribok na inasikaso."</p>
+          <span class="testi-tag">OS Licensing</span>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar purple">JM</div>
+            <div>
+              <div class="testi-name">Jose M.</div>
+              <div class="testi-location">Brgy. Cararayan, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Nalingawan ko password kan laptop ko, nalisang ako ta andun gabos na files ko. Dinara
+            ko sa CarolinaTECH Technician, mayong 30 minutes nabuksan ninda dayon! Salamat ta daing nawarang files."</p>
+          <span class="testi-tag">Password Reset</span>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar emerald">KV</div>
+            <div>
+              <div class="testi-name">Kiko V.</div>
+              <div class="testi-location">Brgy. Dayangdang, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Aba, akala ko nawara na su mga lumang ritrato kan pamilya mi sa sirang na hard drive.
+            Na-recover kan CarolinaTECH Technician gabos! Sobrang salamat po saindo, talagang maasahan."</p>
+          <span class="testi-tag">Data Recovery</span>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar blue">AP</div>
+            <div>
+              <div class="testi-name">Ana P.</div>
+              <div class="testi-location">Brgy. Liboton, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Nag-o-overheat su gaming PC ko pag nagkawat Valorant. Lininisan kan CarolinaTECH
+            Technician, linatagan bagong thermal paste, pinalitan fan. Ngonian malipot na maray, daing lag pag
+            nagkakawat."</p>
+          <span class="testi-tag">PC Maintenance</span>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar purple">LB</div>
+            <div>
+              <div class="testi-name">Lito B.</div>
+              <div class="testi-location">Brgy. Bagumbayan, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Nagkaag su CarolinaTECH Technician surveillance cameras sa bodega mi. An linaw kan
+            night vision, tapos may alert pa sa phone ko pag may naglalakaw. Daing worry maski banggi."</p>
+          <span class="testi-tag">CCTV Installation</span>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar emerald">GD</div>
+            <div>
+              <div class="testi-name">Grace D.</div>
+              <div class="testi-location">Brgy. Lerma, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Daing buhay talaga su laptop ko, akala ko bibili na naman ako bago. Sabi kan
+            CarolinaTECH Technician shorted daa su motherboard. Nabilog ninda man, mas nakatipid ako."</p>
+          <span class="testi-tag">Computer Repair</span>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar blue">RG</div>
+            <div>
+              <div class="testi-name">Ryan G.</div>
+              <div class="testi-location">Brgy. Calauag, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Insalak kan CarolinaTECH Technician su mesh Wi-Fi ninda ta maluya su router kan PLDT.
+            Daing buffer maski mag-stream 4K sa ikaduwang coating. Sulit an bayad po."</p>
+          <span class="testi-tag">Wi-Fi Mesh Setup</span>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar purple">CM</div>
+            <div>
+              <div class="testi-name">Charee M.</div>
+              <div class="testi-location">Brgy. Peñafrancia, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Nagpa-cabling kami sa CarolinaTECH Technician para sa study hub. Ang linis tignan,
+            daing mga kable na nakasablay. Mabilis pa an internet sa lambang table kan mga estudyante."</p>
+          <span class="testi-tag">Structured Cabling</span>
+        </div>
+
+        <!-- Card 14 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar emerald">JT</div>
+            <div>
+              <div class="testi-name">Jun T.</div>
+              <div class="testi-location">Brgy. Sabang, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Daming virus kan PC ko dulo sa mga download. Grabe an pop-ups saka an bagal. Nilinis
+            kan CarolinaTECH Technician gabos tapos tinabangan akong mag-setup nin safe na browser. Ngayon okey na okey
+            na."</p>
+          <span class="testi-tag">Virus Removal</span>
+        </div>
+
+        <!-- Card 15 -->
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar blue">RO</div>
+            <div>
+              <div class="testi-name">Ramon O.</div>
+              <div class="testi-location">Brgy. Triangulo, Naga City</div>
+            </div>
+            <div class="testi-rating">★★★★★</div>
+          </div>
+          <p class="testi-text">"Pina-setup mi sa CarolinaTECH Technician su wireless printer sa tindahan para makaprint
+            gabos dawa gamit laptop. Madalion na mag-print ngonian, daing ribok na saksak-saksak."</p>
+          <span class="testi-tag">Printer Sharing</span>
+        </div>
+      </div>
+
+      <button class="slider-btn next-btn" id="slideNext" aria-label="Next testimonials">&#8594;</button>
+    </div>
+  </section>
+
   <section id="process">
     <div class="section-tag reveal">// how it works</div>
     <h2 class="section-title reveal">Simple 4-Step Process</h2>
@@ -342,292 +616,376 @@
         <p class="step-desc">Everything is tested before handover. We make sure you're satisfied before we leave.</p>
       </div>
     </div>
-  </section>
+    <!-- COST ESTIMATOR SECTION -->
+    <section id="estimator">
+      <div class="section-tag reveal">// cost calculator</div>
+      <h2 class="section-title reveal">Estimate Your Service Cost</h2>
+      <p class="section-sub reveal">Select your service needs below to calculate an instant base service labor estimate.
+      </p>
 
-  <section id="contact">
-    <div class="section-tag reveal">// contact</div>
-    <h2 class="section-title reveal">Get in Touch</h2>
-    <p class="section-sub reveal">Located in Brgy. Carolina, Naga City. Reach out anytime — we respond fast.</p>
-    <div class="contact-wrap">
-      <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
-        <!-- WEB3FORMS CONFIG -->
-        <input type="hidden" name="access_key" value="c2e04546-3172-4232-a0ce-8bf85a8535b5">
-        <input type="hidden" name="subject" value="New Inquiry from Carolina Tech Website">
-        <input type="hidden" name="from_name" value="Carolina Tech Website">
-
-        <div class="form-row">
-          <div>
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required />
-          </div>
-          <div>
-            <label for="phone">Contact Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX" />
-          </div>
-        </div>
-        <div>
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="yourname@email.com" />
-        </div>
-        <div>
-          <label for="service">Service Needed</label>
-          <select id="service" name="service">
-            <option value="">Select a service...</option>
-            <optgroup label="Computer &amp; Device">
-              <option>Desktop / Laptop Repair</option>
-              <option>Cellphone Repair</option>
-              <option>OS Installation</option>
-              <option>Office Software Installation</option>
-              <option>Hardware Cleaning &amp; Maintenance</option>
-              <option>Performance Upgrade (RAM / SSD)</option>
-              <option>Virus &amp; Malware Removal</option>
-              <option>Data Backup &amp; Recovery</option>
-              <option>Windows Login Password Removal</option>
-              <option>Office &amp; Windows OS Licensing</option>
-            </optgroup>
-            <optgroup label="CCTV &amp; Security">
-              <option>CCTV Installation</option>
-              <option>CCTV Monitoring Setup</option>
-              <option>CCTV Maintenance / Repair</option>
-            </optgroup>
-            <optgroup label="Networking &amp; Office IT">
-              <option>Network Setup &amp; Configuration</option>
-              <option>Structured Cabling</option>
-              <option>Wi-Fi Troubleshooting</option>
-              <option>Office IT Setup</option>
-            </optgroup>
-            <option>Other / Not Sure</option>
+      <div class="estimator-container reveal">
+        <div class="est-controls">
+          <label for="estCategory">Select Device / Category</label>
+          <select id="estCategory">
+            <option value="computer">Computer &amp; Device Services</option>
+            <option value="cctv">CCTV &amp; Security Services</option>
+            <option value="network">Networking &amp; IT Services</option>
           </select>
-        </div>
-        <div>
-          <label for="msg">Describe Your Issue or Request</label>
-          <textarea id="msg" name="message" placeholder="Tell us what you need help with..."></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message →</button>
-        <!-- Removed formsubmit captcha field -->
-      </form>
 
-      <div class="contact-info reveal">
-        <div class="info-item">
-          <span class="info-icon">📍</span>
-          <div>
-            <div class="info-label">Address</div>
-            <div class="info-val">Brgy. Carolina, Naga City<br />Camarines Sur, Philippines</div>
+          <div class="est-services-checklist" id="estServicesChecklist">
+            <!-- Checkboxes will be injected dynamically via JS -->
+          </div>
+
+          <div id="estMaterialsContainer" style="display: none; margin-top: 24px;">
+            <label class="est-section-label" style="font-family: var(--font-head); font-size: 13px; font-weight: 700; color: var(--text); display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em;">CCTV Consumables &amp; Materials (Optional)</label>
+            <p class="est-section-note" style="font-size: 11.5px; color: var(--muted); margin: 0 0 12px 0; line-height: 1.4;">💡 <strong>Note:</strong> Material prices are dynamic, subject to market availability, and vary based on the specific brand/model selected. All material pricing is negotiable.</p>
+            <div class="est-services-checklist" id="estMaterialsChecklist">
+              <!-- CCTV Consumables will be injected here -->
+            </div>
           </div>
         </div>
-        <div class="info-item">
-          <span class="info-icon">📞</span>
-          <div>
-            <div class="info-label">Mobile / SMS</div>
-            <div class="info-val"><a href="tel:09496437357">0949 643 7357</a></div>
+
+        <div class="est-summary">
+          <div class="est-summary-card">
+            <span class="est-sum-title">Estimate Summary</span>
+            <div class="est-sum-breakdown" id="estSumBreakdown">
+              <div class="est-empty-msg">No services selected yet.</div>
+            </div>
+            <div class="est-sum-divider"></div>
+            <div id="estTotalContainer">
+              <div class="est-sum-total">
+                <span>Estimated Labor:</span>
+                <span class="total-price" id="estTotalVal">₱0</span>
+              </div>
+            </div>
+            <p class="est-disclaimer">⚠ <strong>Notice:</strong> CCTV prices indicate the installation/labor fee per camera unit. Camera units, main units (DVR/NVR), and consumable materials are NOT included in labor rates and are charged separately. Services marked as <strong>Negotiable</strong> can be adjusted based on project size/scope.</p>
+            <button id="bookEstimateBtn" class="est-book-btn" disabled>Book this Estimate →</button>
           </div>
         </div>
-        <div class="info-item">
-          <span class="info-icon">✉️</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-tag reveal">// contact</div>
+      <h2 class="section-title reveal">Get in Touch</h2>
+      <p class="section-sub reveal">Located in Brgy. Carolina, Naga City. Reach out anytime — we respond fast.</p>
+      <div class="contact-wrap">
+        <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
+          <!-- WEB3FORMS CONFIG -->
+          <input type="hidden" name="access_key" value="c2e04546-3172-4232-a0ce-8bf85a8535b5">
+          <input type="hidden" name="subject" value="New Inquiry from Carolina Tech Website">
+          <input type="hidden" name="from_name" value="Carolina Tech Website">
+
+          <div class="form-row">
+            <div>
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required />
+            </div>
+            <div>
+              <label for="phone">Contact Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX" />
+            </div>
+          </div>
           <div>
-            <div class="info-label">Email</div>
-            <div class="info-val"><a href="mailto:jrsniam@gmail.com">jrsniam@gmail.com</a></div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="yourname@email.com" />
+          </div>
+          <div>
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <optgroup label="Computer &amp; Device">
+                <option>Desktop / Laptop Repair</option>
+                <option>Cellphone Repair</option>
+                <option>OS Installation</option>
+                <option>Office Software Installation</option>
+                <option>Hardware Cleaning &amp; Maintenance</option>
+                <option>Performance Upgrade (RAM / SSD)</option>
+                <option>Virus &amp; Malware Removal</option>
+                <option>Data Backup &amp; Recovery</option>
+                <option>Windows Login Password Removal</option>
+                <option>Office &amp; Windows OS Licensing</option>
+              </optgroup>
+              <optgroup label="CCTV &amp; Security">
+                <option>CCTV Installation</option>
+                <option>CCTV Monitoring Setup</option>
+                <option>CCTV Maintenance / Repair</option>
+              </optgroup>
+              <optgroup label="Networking &amp; Office IT">
+                <option>Network Setup &amp; Configuration</option>
+                <option>Structured Cabling</option>
+                <option>Wi-Fi Troubleshooting</option>
+                <option>Office IT Setup</option>
+              </optgroup>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div>
+            <label for="msg">Describe Your Issue or Request</label>
+            <textarea id="msg" name="message" placeholder="Tell us what you need help with..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message →</button>
+          <!-- Removed formsubmit captcha field -->
+        </form>
+
+        <div class="contact-info reveal">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <div class="info-label">Address</div>
+              <div class="info-val">Brgy. Carolina, Naga City<br />Camarines Sur, Philippines</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <div class="info-label">Mobile / SMS</div>
+              <div class="info-val"><a href="tel:09496437357">0949 643 7357</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">✉️</span>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-val"><a href="mailto:jrsniam@gmail.com">jrsniam@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🕐</span>
+            <div>
+              <div class="info-label">Hours</div>
+              <div class="info-val">Mon – Sat: 8:00 AM – 6:00 PM<br />Sun: By Appointment</div>
+            </div>
+          </div>
+          <div class="map-note">
+            <span>📌</span>
+            <span>Serving Brgy. Carolina, Naga City, and surrounding areas in Camarines Sur.</span>
           </div>
         </div>
-        <div class="info-item">
-          <span class="info-icon">🕐</span>
-          <div>
-            <div class="info-label">Hours</div>
-            <div class="info-val">Mon – Sat: 8:00 AM – 6:00 PM<br />Sun: By Appointment</div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="section-tag reveal">// faq</div>
+      <h2 class="section-title reveal">Frequently Asked Questions</h2>
+      <p class="section-sub reveal">Got questions? Here are the ones we hear most often.</p>
+      <div class="faq-list reveal">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            How long does a typical repair take?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            It depends on the issue. Simple repairs like OS installation, virus removal, or software setup are usually
+            done same-day. Hardware repairs may take longer if parts need to be ordered — we'll always give you a clear
+            timeframe after assessment.
           </div>
         </div>
-        <div class="map-note">
-          <span>📌</span>
-          <span>Serving Brgy. Carolina, Naga City, and surrounding areas in Camarines Sur.</span>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            Do you charge for diagnosis / assessment?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            No — diagnosis is free. We check your device first, identify the problem, and give you a quote. You only pay
+            when you approve the repair or service.
+          </div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            Why are parts order-based for laptop, cellphone, and desktop repairs?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            We source the correct parts specific to your device model to ensure quality and compatibility. Rather than
+            keeping a large stock of parts that may not match your unit, we order exactly what's needed after diagnosing
+            your device. This ensures better results and fair pricing.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            Can you come to my home or office?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes! We offer on-site services for CCTV installation, networking, cabling, and office IT setup. For device
+            repairs, you can bring your unit to us in Brgy. Carolina, or we can arrange a visit depending on the
+            situation.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            What areas do you serve?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            We are based in Brgy. Carolina, Naga City and primarily serve clients within Naga City and nearby
+            municipalities in Camarines Sur. Contact us to check if we can reach your area.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            Do you install CCTV for homes, not just businesses?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            Absolutely. We install CCTV systems for both residential and commercial clients. Whether it's a single
+            camera
+            for your front door or a full multi-camera setup for an office or store, we'll design the right solution for
+            you.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            How do I get started or request a service?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            Just message us on WhatsApp, call/text 0949 643 7357, email jermaje@gmail.com, or fill out the contact form
+            below. Describe your issue and we'll get back to you as soon as possible.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            Can you help if I'm locked out of my Windows account?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes! We specialize in safe Windows login password removal and account recovery for Windows 10/11. If you've
+            forgotten your password or are locked out of your computer, we can help you regain access quickly without
+            data
+            loss.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            Are your Office and Windows licenses legitimate?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            Absolutely. We offer genuine, legitimate licenses for Microsoft Office and Windows Operating Systems. All
+            licenses come with proper activation and official support. We believe in legal and affordable solutions for
+            everyone.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            What payment methods do you accept?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            We accept cash, bank transfers, online payment apps (GCash, PayMaya), and installment plans for larger
+            projects. We'll discuss payment options with you after providing a quote. For online orders or licensing,
+            we'll confirm payment methods when you contact us.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            Do you provide warranty or guarantee on repairs and services?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes! We stand behind our work. Most repairs and services come with a warranty period. We'll discuss the
+            specific warranty details when we provide your quote. If anything goes wrong within the warranty period,
+            we'll
+            fix it at no additional cost.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            How much does your service usually cost?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            Prices vary depending on the service and complexity of the issue. Computer repairs start from ₱200-₱1,500+,
+            CCTV installations depend on system size, and networking services vary by scope. We always provide a free
+            assessment and detailed quote before starting any work — no hidden charges.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FLOATING CHAT BUTTONS -->
+    <div class="floating-socials" id="floatingSocials">
+      <div class="fs-menu" id="fsMenu">
+        <a class="fs-btn sms-btn" href="sms:+639496437357" title="Send SMS">
+          <span class="fs-icon"><i data-lucide="message-square-text"></i></span>
+          <span class="fs-text">SMS</span>
+        </a>
+        <a class="fs-btn viber-btn" href="viber://chat?number=639496437357" target="_blank" rel="noopener"
+          title="Chat on Viber">
+          <span class="fs-icon"><i data-lucide="phone"></i></span>
+          <span class="fs-text">Viber</span>
+        </a>
+        <a class="fs-btn wa-btn"
+          href="https://wa.me/639496437357?text=Hi%20Carolina%20Technician!%20I%20need%20help%20with%20my%20device."
+          target="_blank" rel="noopener" title="Chat on WhatsApp">
+          <span class="fs-icon"><i data-lucide="message-circle"></i></span>
+          <span class="fs-text">WhatsApp</span>
+        </a>
+      </div>
+      <button class="fs-trigger" id="fsTrigger" aria-label="Toggle contact menu" title="Contact Us">
+        <div class="fs-pulse"></div>
+        <span class="trigger-icon open-icon"><i data-lucide="message-circle"></i></span>
+        <span class="trigger-icon close-icon"><i data-lucide="x"></i></span>
+      </button>
+    </div>
+
+    <footer>
+      <div class="footer-logo">Carolina<span class="ct">Tech</span></div>
+      <div class="footer-copy">© 2026 Carolina Technician · Naga City, Camarines Sur</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+
+    <!-- DETAIL MODAL OVERLAY -->
+    <div class="service-modal" id="serviceModal" aria-hidden="true">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+        <div class="modal-icon-wrapper" id="modalIcon"></div>
+        <h3 class="modal-title" id="modalTitle">Service Details</h3>
+        <p class="modal-description" id="modalDesc">Detailed description goes here...</p>
+
+        <div class="modal-details-grid">
+          <div class="modal-detail-item">
+            <span class="md-label">⏳ Turnaround Time</span>
+            <span class="md-value" id="modalTime">1-2 Hours</span>
+          </div>
+          <div class="modal-detail-item">
+            <span class="md-label">💰 Labor Pricing</span>
+            <span class="md-value" id="modalPrice">Starts at ₱500</span>
+          </div>
+        </div>
+
+        <div class="modal-checklist">
+          <span class="mc-title">What is included:</span>
+          <ul class="mc-list" id="modalChecklist">
+            <!-- Injected checklist items -->
+          </ul>
+        </div>
+
+        <button class="modal-action-btn" id="modalActionBtn">Book this Service &rarr;</button>
       </div>
     </div>
-  </section>
 
-  <section id="faq">
-    <div class="section-tag reveal">// faq</div>
-    <h2 class="section-title reveal">Frequently Asked Questions</h2>
-    <p class="section-sub reveal">Got questions? Here are the ones we hear most often.</p>
-    <div class="faq-list reveal">
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          How long does a typical repair take?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          It depends on the issue. Simple repairs like OS installation, virus removal, or software setup are usually
-          done same-day. Hardware repairs may take longer if parts need to be ordered — we'll always give you a clear
-          timeframe after assessment.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          Do you charge for diagnosis / assessment?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          No — diagnosis is free. We check your device first, identify the problem, and give you a quote. You only pay
-          when you approve the repair or service.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          Why are parts order-based for laptop, cellphone, and desktop repairs?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          We source the correct parts specific to your device model to ensure quality and compatibility. Rather than
-          keeping a large stock of parts that may not match your unit, we order exactly what's needed after diagnosing
-          your device. This ensures better results and fair pricing.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          Can you come to my home or office?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          Yes! We offer on-site services for CCTV installation, networking, cabling, and office IT setup. For device
-          repairs, you can bring your unit to us in Brgy. Carolina, or we can arrange a visit depending on the
-          situation.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          What areas do you serve?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          We are based in Brgy. Carolina, Naga City and primarily serve clients within Naga City and nearby
-          municipalities in Camarines Sur. Contact us to check if we can reach your area.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          Do you install CCTV for homes, not just businesses?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          Absolutely. We install CCTV systems for both residential and commercial clients. Whether it's a single camera
-          for your front door or a full multi-camera setup for an office or store, we'll design the right solution for
-          you.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          How do I get started or request a service?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          Just message us on WhatsApp, call/text 0949 643 7357, email jermaje@gmail.com, or fill out the contact form
-          below. Describe your issue and we'll get back to you as soon as possible.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          Can you help if I'm locked out of my Windows account?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          Yes! We specialize in safe Windows login password removal and account recovery for Windows 10/11. If you've
-          forgotten your password or are locked out of your computer, we can help you regain access quickly without data
-          loss.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          Are your Office and Windows licenses legitimate?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          Absolutely. We offer genuine, legitimate licenses for Microsoft Office and Windows Operating Systems. All
-          licenses come with proper activation and official support. We believe in legal and affordable solutions for
-          everyone.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          What payment methods do you accept?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          We accept cash, bank transfers, online payment apps (GCash, PayMaya), and installment plans for larger
-          projects. We'll discuss payment options with you after providing a quote. For online orders or licensing,
-          we'll confirm payment methods when you contact us.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          Do you provide warranty or guarantee on repairs and services?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          Yes! We stand behind our work. Most repairs and services come with a warranty period. We'll discuss the
-          specific warranty details when we provide your quote. If anything goes wrong within the warranty period, we'll
-          fix it at no additional cost.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          How much does your service usually cost?
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          Prices vary depending on the service and complexity of the issue. Computer repairs start from ₱200-₱1,500+,
-          CCTV installations depend on system size, and networking services vary by scope. We always provide a free
-          assessment and detailed quote before starting any work — no hidden charges.
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FLOATING CHAT BUTTONS -->
-  <div class="floating-socials" id="floatingSocials">
-    <div class="fs-menu" id="fsMenu">
-      <a class="fs-btn sms-btn" href="sms:+639496437357" title="Send SMS">
-        <span class="fs-icon"><i data-lucide="message-square-text"></i></span>
-        <span class="fs-text">SMS</span>
-      </a>
-      <a class="fs-btn viber-btn" href="viber://chat?number=639496437357" target="_blank" rel="noopener" title="Chat on Viber">
-        <span class="fs-icon"><i data-lucide="phone"></i></span>
-        <span class="fs-text">Viber</span>
-      </a>
-      <a class="fs-btn wa-btn" href="https://wa.me/639496437357?text=Hi%20Carolina%20Technician!%20I%20need%20help%20with%20my%20device." target="_blank" rel="noopener" title="Chat on WhatsApp">
-        <span class="fs-icon"><i data-lucide="message-circle"></i></span>
-        <span class="fs-text">WhatsApp</span>
-      </a>
-    </div>
-    <button class="fs-trigger" id="fsTrigger" aria-label="Toggle contact menu" title="Contact Us">
-      <div class="fs-pulse"></div>
-      <span class="trigger-icon open-icon"><i data-lucide="message-circle"></i></span>
-      <span class="trigger-icon close-icon"><i data-lucide="x"></i></span>
-    </button>
-  </div>
-
-  <footer>
-    <div class="footer-logo">Carolina<span class="ct">Tech</span></div>
-    <div class="footer-copy">© 2026 Carolina Technician · Naga City, Camarines Sur</div>
-    <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
