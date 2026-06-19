@@ -4,11 +4,13 @@ A modern, high-performance landing page for Carolina Technician, providing IT & 
 
 ## 🚀 Features
 
-- **Premium Dark Mode UI**: A sleek, neon-accented dark theme built from scratch with CSS.
-- **Dynamic Animations**: Scroll-triggered reveal animations, statistics counters, and cascading service cards.
+- **Premium Developer UI**: A clean, light-themed modern SaaS/developer aesthetic built from scratch with CSS custom properties, grid lines, and soft shadows.
+- **Optimized Typography**: Clean editorial headings using *Cabinet Grotesk*, highly legible body copy with *Inter*, and command-line code blocks styled with *JetBrains Mono*.
+- **Interactive Service Cards**: Clickable cards that automatically scroll to the contact form and pre-select the appropriate service choice in the dropdown.
+- **Technical Terminal Mockup**: A custom dark terminal mockup demonstrating command executions to showcase technical expertise.
 - **Interactive Service Tabs**: Clean, tabbed layout for categorizing services (Computer & Device, CCTV & Security, Networking).
 - **Contact Form Integration**: Fully functional, spam-protected contact form powered by [Web3Forms](https://web3forms.com/) (No backend required!).
-- **Floating Socials**: Quick-access, animated floating buttons for WhatsApp and Viber.
+- **Floating Contact Stack**: Quick-access, animated floating buttons for WhatsApp, Viber, and SMS.
 - **Fully Responsive**: Optimized for seamless viewing on desktop, tablet, and mobile devices.
 - **Modern Icons**: Uses the crisp and lightweight [Lucide Icons](https://lucide.dev/) library.
 
