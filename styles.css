@@ -157,6 +157,7 @@ h1 em { font-style: normal; color: var(--accent); }
 h1 .yl { 
   background: linear-gradient(135deg, #4f46e5, #9333ea); 
   -webkit-background-clip: text; 
+  background-clip: text; 
   -webkit-text-fill-color: transparent; 
 }
 
@@ -490,6 +491,14 @@ select option { background: var(--surface); }
 .sms-btn { border-color: rgba(0, 122, 255, 0.35); }
 .sms-btn .fs-icon { color: #007aff; }
 .sms-btn:hover { border-color: #007aff; }
+
+.messenger-btn { border-color: rgba(0, 132, 255, 0.35); }
+.messenger-btn .fs-icon { color: #0084ff; }
+.messenger-btn:hover { border-color: #0084ff; }
+
+.fb-btn { border-color: rgba(24, 119, 242, 0.35); }
+.fb-btn .fs-icon { color: #1877f2; }
+.fb-btn:hover { border-color: #1877f2; }
 
 .fs-trigger {
   width: 54px; height: 54px; border-radius: 50%;
@@ -852,7 +861,6 @@ body.dark-mode .modal-backdrop { background: rgba(0, 0, 0, 0.6); }
 
 /* ABOUT THE TECHNICIAN SECTION */
 #about {
-  padding: 80px 20px;
   border-bottom: 1px solid var(--border);
 }
 .about-container {
@@ -1032,5 +1040,44 @@ body.dark-mode .fs-btn {
 }
 body.dark-mode .fs-btn:hover {
   background: var(--surface);
+}
+
+/* Custom SVG Icon Alignment */
+.why-icon svg {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+}
+.cred-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+}
+.ac-title svg,
+.est-section-note svg,
+.est-disclaimer svg,
+.map-note svg,
+.md-label svg,
+.order-badge svg {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 6px;
+  color: var(--accent);
+}
+.order-badge svg {
+  color: #b45309;
+}
+.est-section-note svg {
+  color: var(--accent);
+}
+.est-disclaimer svg {
+  color: var(--muted);
+}
+.info-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
 }
 
