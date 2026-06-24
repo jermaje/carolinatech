@@ -356,6 +356,12 @@ function updateEstimator() {
       selectedMaterialQty = {};
     }
   }
+
+  // Show/Hide CCTV disclaimer
+  const estDisclaimer = document.getElementById('estDisclaimer');
+  if (estDisclaimer) {
+    estDisclaimer.style.display = category === 'cctv' ? 'block' : 'none';
+  }
   
   estServicesChecklist.innerHTML = services.map(s => {
     const isSelected = selectedServices.has(s.id);
@@ -623,7 +629,10 @@ if (bookEstimateBtn) {
     if (selectedMatNames.length > 0) {
       msgText += `\n\nMATERIALS / CONSUMABLES:\n- ${selectedMatNames.join('\n- ')}`;
     }
-    msgText += `\n\n*Notice: I understand camera units and other hardware/devices are not included in the installation labor cost and are charged separately.\n\nMy estimated total is ${grandTotalVal}. Please review my request and contact me.`;
+    if (estCategory && estCategory.value === 'cctv') {
+      msgText += `\n\n*Notice: I understand camera units and other hardware/devices are not included in the installation labor cost and are charged separately.`;
+    }
+    msgText += `\n\nMy estimated total is ${grandTotalVal}. Please review my request and contact me.`;
     
     const messageField = document.getElementById('msg');
     if (messageField) {
@@ -828,6 +837,11 @@ if (modalActionBtn) {
       if (!matched) {
         select.value = "";
       }
+    }
+
+    const messageField = document.getElementById('msg');
+    if (messageField) {
+      messageField.value = `I would like to inquire about and book the following service:\n- ${selectedTitle}\n\nPlease let me know your availability and next steps.`;
     }
     
     const contactSection = document.getElementById('contact');
