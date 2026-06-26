@@ -63,9 +63,12 @@
   .estimator-container { grid-template-columns: 1fr; gap: 32px; }
 
   /* About components media overrides */
-  .about-container {
+  .about-wrapper {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
+  }
+  .about-identity-panel {
+    position: static;
   }
 
   /* Horizontal scrolling segmented tabs on mobile */
@@ -85,7 +88,7 @@
     display: none; /* Chrome, Safari and Opera */
   }
   .tab-btn {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
     justify-content: center;
     padding: 10px 18px;
     font-size: 13px;
