@@ -22,9 +22,27 @@ A modern, high-performance landing page for Carolina Technician, providing IT & 
 
 ## 📂 Project Structure
 
-- `index.html` - The main HTML document containing all sections (Hero, Services, Why Us, Process, FAQ, Contact).
-- `styles.css` - All styling, including typography, layout, variables, and animations.
-- `script.js` - Interactivity logic (mobile menu, sticky nav, scroll reveals, tab switching, form submission).
+- `index.html` - The main HTML document containing all layout sections (Hero, Services, Why Us, About, Process, FAQ, Contact).
+- `assets/` - Directory containing all static assets:
+  - `css/` - Modular styling components:
+    - `style.css` - Main entry hub importing all stylesheets.
+    - `variables.css` - CSS Custom Properties / theme definitions.
+    - `reset.css` - Base resets, body scroll parameters, and theme transitions.
+    - `layout.css` - Navbar and footer structural styling.
+    - `components.css` - Styled individual components (buttons, input elements, modals, FAB stack, segment tabs).
+    - `sections.css` - Grid blocks and layouts for page sections.
+    - `utilities.css` - Scroll reveals and text alignment helpers.
+    - `animations.css` - Global animation `@keyframes`.
+    - `responsive.css` - Organized media query overrides.
+  - `js/` - Modular JavaScript logic:
+    - `main.js` - Application coordinator (modals, cost estimator, area checker, forms, theme state).
+    - `navbar.js` - Navigation drawers, active link styling, sticky navbar scroll states, and contact FAB stack toggling.
+    - `scroll.js` - Intersection Observer for page element reveals on scroll.
+    - `gallery.js` - Testimonials carousel scrolling controls.
+    - `faq.js` - Collapsible FAQ accordion items.
+    - `counter.js` - Count-up number animation logic.
+  - `images/` - Subfolders organized for future image assets (`hero`, `services`, `projects`, etc.).
+
 
 ## 💻 Getting Started
 

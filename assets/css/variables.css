@@ -1,0 +1,40 @@
+/* ==========================================================================
+   CSS CUSTOM PROPERTIES / THEME VARIABLES
+   ========================================================================== */
+
+:root {
+  --bg: #ffffff;
+  --bg2: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --border-focus: #cbd5e1;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #4f46e5;         /* Indigo primary accent */
+  --accent-light: #f5f3ff;   /* Soft purple background tint */
+  --accent-dark: #0f172a;    /* Pitch black/dark slate for primary CTAs */
+  --accent2: #10b981;        /* Emerald green for badges/status */
+  --green: #10b981;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.03), 0 1px 2px rgba(15, 23, 42, 0.02);
+  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.04), 0 1px 8px rgba(15, 23, 42, 0.02);
+  --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.06), 0 1px 10px rgba(15, 23, 42, 0.02);
+  --font-head: 'Cabinet Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body.dark-mode {
+  --bg: #0a0e14;
+  --bg2: #0d1219;
+  --surface: #111922;
+  --border: #1a2538;
+  --border-focus: #2d3b50;
+  --text: #dde8f5;
+  --muted: #5a7190;
+  --accent: #6366f1; /* Brighter indigo for dark background contrast */
+  --accent-light: rgba(99, 102, 241, 0.12);
+  --accent-dark: #ffffff;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
