@@ -173,6 +173,36 @@
   overflow: hidden;
 }
 
+/* Clickable CCTV variant */
+.service-card--cctv {
+  cursor: pointer;
+}
+
+.service-card-pkg-note {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.6rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.35);
+  animation: pkgNotePulse 2.5s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes pkgNotePulse {
+  0%, 100% { box-shadow: 0 2px 8px rgba(37,99,235,0.35); }
+  50%       { box-shadow: 0 2px 18px rgba(37,99,235,0.65); }
+}
+
 .service-card::before {
   content: '';
   position: absolute;
@@ -817,4 +847,258 @@
 
 .hamburger.active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   CCTV PACKAGES MODAL
+   ═══════════════════════════════════════════════════════ */
+
+.cctv-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cctv-modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.cctv-modal-overlay.active .cctv-modal-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.cctv-modal-panel {
+  background: #0f172a;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 2.25rem 2rem 2rem;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(37,99,235,0.2);
+  transform: translateY(24px) scale(0.97);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;
+}
+
+/* Scrollbar for modal */
+.cctv-modal-panel::-webkit-scrollbar { width: 6px; }
+.cctv-modal-panel::-webkit-scrollbar-track { background: transparent; }
+.cctv-modal-panel::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 99px; }
+
+.cctv-modal-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.65);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cctv-modal-close:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.cctv-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.cctv-modal-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(37,99,235,0.25), rgba(14,165,233,0.15));
+  border: 1px solid rgba(37,99,235,0.3);
+  border-radius: 14px;
+  color: #60a5fa;
+}
+
+.cctv-modal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.2rem;
+}
+
+.cctv-modal-subtitle {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.45);
+  margin: 0;
+}
+
+/* Package grid */
+.cctv-pkg-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.cctv-pkg-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 1.1rem 1rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.cctv-pkg-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(37,99,235,0.3);
+  transform: translateY(-3px);
+}
+
+.cctv-pkg-featured {
+  background: linear-gradient(135deg, rgba(37,99,235,0.18), rgba(14,165,233,0.10));
+  border-color: rgba(37,99,235,0.4);
+  box-shadow: 0 0 0 1px rgba(37,99,235,0.2), 0 8px 30px rgba(37,99,235,0.12);
+}
+
+.cctv-pkg-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #2563eb, #0ea5e9);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.cctv-pkg-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.cctv-pkg-cameras {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #60a5fa;
+}
+
+.cctv-pkg-price {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.cctv-pkg-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.25rem;
+}
+
+.cctv-pkg-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cctv-pkg-features li {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.cctv-pkg-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #34d399;
+  font-size: 0.65rem;
+  top: 1px;
+}
+
+.cctv-modal-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.cctv-modal-note svg {
+  flex-shrink: 0;
+  color: #f59e0b;
+}
+
+.cctv-modal-note strong {
+  color: rgba(255,255,255,0.7);
+}
+
+.cctv-modal-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.8rem 1.75rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.4);
+}
+
+.cctv-modal-cta:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
 }

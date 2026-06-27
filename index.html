@@ -312,7 +312,11 @@
         </div>
 
         <!-- 5. CCTV Installation -->
-        <div class="service-card reveal">
+        <div class="service-card service-card--cctv reveal" id="cctv-card" onclick="document.getElementById('cctv-modal').classList.add('active')" role="button" tabindex="0" aria-label="CCTV Installation – click to view packages" onkeydown="if(event.key==='Enter')document.getElementById('cctv-modal').classList.add('active')">
+          <div class="service-card-pkg-note">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12l-8-8-8 8 8 8z"/></svg>
+            Click for Packages
+          </div>
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
@@ -839,9 +843,141 @@
   <!-- ═══════════════════════════════════════════════════════
        SCRIPTS
        ═══════════════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════════════
+       CCTV PACKAGES MODAL
+       ═══════════════════════════════════════════════════════ -->
+  <div id="cctv-modal" class="cctv-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cctv-modal-title" onclick="if(event.target===this)this.classList.remove('active')">
+    <div class="cctv-modal-panel">
+
+      <!-- Close button -->
+      <button class="cctv-modal-close" onclick="document.getElementById('cctv-modal').classList.remove('active')" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- Header -->
+      <div class="cctv-modal-header">
+        <div class="cctv-modal-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m23 7-7 5 7 5V7z"/>
+            <rect x="1" y="5" width="15" height="14" rx="2"/>
+          </svg>
+        </div>
+        <div>
+          <h2 id="cctv-modal-title" class="cctv-modal-title">CCTV Installation Packages</h2>
+          <p class="cctv-modal-subtitle">Available packages for your home or business</p>
+        </div>
+      </div>
+
+      <!-- Packages -->
+      <div class="cctv-pkg-list">
+
+        <div class="cctv-pkg-card cctv-pkg-featured">
+          <div class="cctv-pkg-badge">Most Popular</div>
+          <div class="cctv-pkg-top">
+            <div class="cctv-pkg-cameras">4 Cameras</div>
+            <div class="cctv-pkg-price">₱18,999</div>
+          </div>
+          <div class="cctv-pkg-name">4 Camera 2MP Package</div>
+          <ul class="cctv-pkg-features">
+            <li>4 Camera 2MP (Bullet or Dome)</li>
+            <li>4 Channel DVR 2MP</li>
+            <li>500GB HDD</li>
+            <li>Free Installation</li>
+            <li>Mobile Remote Viewing</li>
+            <li>6 Months Warranty</li>
+            <li>Power Supply Included</li>
+          </ul>
+        </div>
+
+        <div class="cctv-pkg-card">
+          <div class="cctv-pkg-top">
+            <div class="cctv-pkg-cameras">5 Cameras</div>
+            <div class="cctv-pkg-price">₱23,000</div>
+          </div>
+          <div class="cctv-pkg-name">5 Camera Package</div>
+          <ul class="cctv-pkg-features">
+            <li>5 Camera System</li>
+            <li>DVR &amp; HDD Included</li>
+            <li>Free Installation</li>
+            <li>Mobile Remote Viewing</li>
+            <li>Warranty Included</li>
+          </ul>
+        </div>
+
+        <div class="cctv-pkg-card">
+          <div class="cctv-pkg-top">
+            <div class="cctv-pkg-cameras">6 Cameras</div>
+            <div class="cctv-pkg-price">₱26,000</div>
+          </div>
+          <div class="cctv-pkg-name">6 Camera Package</div>
+          <ul class="cctv-pkg-features">
+            <li>6 Camera System</li>
+            <li>DVR &amp; HDD Included</li>
+            <li>Free Installation</li>
+            <li>Mobile Remote Viewing</li>
+            <li>Warranty Included</li>
+          </ul>
+        </div>
+
+        <div class="cctv-pkg-card">
+          <div class="cctv-pkg-top">
+            <div class="cctv-pkg-cameras">8 Cameras</div>
+            <div class="cctv-pkg-price">₱32,000</div>
+          </div>
+          <div class="cctv-pkg-name">8 Camera Package</div>
+          <ul class="cctv-pkg-features">
+            <li>8 Camera System</li>
+            <li>DVR &amp; HDD Included</li>
+            <li>Free Installation</li>
+            <li>Mobile Remote Viewing</li>
+            <li>Warranty Included</li>
+          </ul>
+        </div>
+
+        <div class="cctv-pkg-card">
+          <div class="cctv-pkg-top">
+            <div class="cctv-pkg-cameras">16 Cameras</div>
+            <div class="cctv-pkg-price">₱55,000</div>
+          </div>
+          <div class="cctv-pkg-name">16 Camera Package</div>
+          <ul class="cctv-pkg-features">
+            <li>16 Camera System</li>
+            <li>DVR &amp; HDD Included</li>
+            <li>Free Installation</li>
+            <li>Mobile Remote Viewing</li>
+            <li>Warranty Included</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Disclaimer -->
+      <p class="cctv-modal-note">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        TV monitors are <strong>not included</strong> in these packages.
+      </p>
+
+      <!-- CTA -->
+      <a href="#about" class="cctv-modal-cta" onclick="document.getElementById('cctv-modal').classList.remove('active')">
+        Inquire Now
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+    </div>
+  </div>
+
   <script>
     // Set footer year
     document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    // Close CCTV modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('cctv-modal').classList.remove('active');
+      }
+    });
   </script>
   <script src="assets/js/main.js" defer></script>
 
