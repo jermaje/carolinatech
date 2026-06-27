@@ -1,27 +1,12 @@
-/* ==========================================================================
-   CAROLINA TECHNICIAN - MAIN ENTRY STYLESHEET
-   ========================================================================== */
+/* ============================================================
+   CAROLINATECH V2 — MAIN STYLESHEET (Import Hub)
+   ============================================================ */
 
-/* 1. Design System & Variables */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900&display=swap');
+
 @import 'variables.css';
-
-/* 2. Base Rules & Resets */
 @import 'reset.css';
-
-/* 3. Global Keyframe Animations */
 @import 'animations.css';
-
-/* 4. Structural Layout Modules */
-@import 'layout.css';
-
-/* 5. Reusable UI Components */
 @import 'components.css';
-
-/* 6. Section Specific Rules & Grids */
 @import 'sections.css';
-
-/* 7. Utility & Helper Classes */
-@import 'utilities.css';
-
-/* 8. Media Queries & Responsive Overrides (Always last!) */
 @import 'responsive.css';

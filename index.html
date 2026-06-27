@@ -4,1263 +4,858 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carolina Technician – IT & Computer Services | Naga City</title>
+  <title>CarolinaTech — Professional IT Solutions for Homes & Businesses</title>
   <meta name="description"
-    content="Carolina Technician provides trusted computer repair, CCTV installation, networking, and IT services in Brgy. Carolina, Naga City.">
-  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,700,800&display=swap" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://unpkg.com/lucide@0.344.0"></script>
+    content="CarolinaTech delivers trusted computer repair, networking, CCTV installation, printer repair, web development, and complete IT solutions for homes and businesses." />
+  <meta name="keywords"
+    content="IT solutions, computer repair, networking, CCTV installation, printer repair, web development, data recovery, virus removal, hardware upgrade, IT consulting" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CarolinaTech — Professional IT Solutions" />
+  <meta property="og:description"
+    content="Professional IT services including computer repair, networking, CCTV installation, and business technology solutions." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563EB'/><text y='22' x='7' font-family='Inter,sans-serif' font-weight='800' font-size='18' fill='white'>C</text></svg>" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
-  <nav>
-    <div class="nav-logo"><span class="logo-dot"></span>Carolina<span class="ct">Tech</span></div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#why">Why Us</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
-      <span class="theme-icon sun-icon"><i data-lucide="sun"></i></span>
-      <span class="theme-icon moon-icon"><i data-lucide="moon"></i></span>
-    </button>
-    <a href="#contact" class="nav-cta">Book a Service →</a>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="transparent">
+    <div class="container">
+      <div class="nav-inner">
 
-  <section class="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-glow2"></div>
-    <div class="hero-content">
-      <div class="hero-tag-container">
-        <a href="#why" class="hero-pill-badge">
-          <span class="badge-dot"></span>
-          <span class="badge-label">Free Assessment</span>
-          <span class="badge-action">Read More &rarr;</span>
+        <!-- Logo -->
+        <a href="#hero" class="nav-logo">
+          <span class="logo-dot"></span>
+          Carolina<span class="logo-accent">Tech</span>
         </a>
-      </div>
-      <h1>Your Trusted<br /><em>IT Technician</em><br />in <span class="yl">Naga City</span></h1>
-      <p class="hero-desc">Computer repair, CCTV installation, networking, cabling, and complete office IT setup —
-        Carolina Technician delivers reliable tech solutions for homes and businesses in Camarines Sur.</p>
 
-      <div class="hero-features">
-        <div class="h-feature-card">
-          <div class="hf-icon-wrapper purple"><i data-lucide="clipboard-check"></i></div>
-          <div class="hf-text">
-            <span class="hf-title">Free Diagnosis</span>
-            <span class="hf-desc">No-charge assessment of your device</span>
-          </div>
-        </div>
-        <div class="h-feature-card">
-          <div class="hf-icon-wrapper pink"><i data-lucide="phone-call"></i></div>
-          <div class="hf-text">
-            <span class="hf-title">Direct Service</span>
-            <span class="hf-desc">Speak straight to the technician</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Book a Service →</a>
-        <a href="#services" class="btn-secondary">Browse Services</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="stats-bar">
-    <div class="stat">
-      <div class="stat-num"><span class="counter" data-target="500">0</span>+</div>
-      <div class="stat-label">Local Clients</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num"><span class="counter" data-target="24">0</span>h</div>
-      <div class="stat-label">Fast Turnaround</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num"><span class="counter" data-target="100">0</span>%</div>
-      <div class="stat-label">Transparent Pricing</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">#<span class="counter" data-target="1">0</span></div>
-      <div class="stat-label">Local Choice</div>
-    </div>
-  </div>
-
-  <section id="services">
-    <div class="section-tag reveal">// services</div>
-    <h2 class="section-title reveal">What We Offer</h2>
-    <p class="section-sub reveal">From PC hardware repair to Windows Server domain administration and custom livestream setups — professional, certified IT support and network engineering by Jerson Jemenez.</p>
-
-    <div class="service-tabs reveal">
-      <button class="tab-btn active" data-tab="computer"><i data-lucide="laptop"></i>Computer &amp; Device</button>
-      <button class="tab-btn" data-tab="cctv"><i data-lucide="video"></i>CCTV &amp; Security</button>
-      <button class="tab-btn" data-tab="network"><i data-lucide="network"></i>Networking &amp; IT</button>
-    </div>
-
-    <div class="services-grid reveal">
-      <!-- COMPUTER & DEVICE -->
-      <div class="service-card" data-category="computer" style="--delay: 1">
-        <div class="service-icon"><i data-lucide="laptop"></i></div>
-        <div class="service-name">Desktop &amp; Laptop Repair</div>
-        <p class="service-desc">Diagnosis and repair of hardware faults — motherboard issues, broken screens, keyboard
-          replacement, overheating, dead units, and power failures.</p>
-        <span class="order-badge"><i data-lucide="alert-circle"></i> Parts are order-based</span>
-        <div class="card-skills">
-          <span>PC Diagnostic &amp; Repair</span>
-          <span>Hardware Maintenance</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="computer" style="--delay: 2">
-        <div class="service-icon"><i data-lucide="smartphone"></i></div>
-        <div class="service-name">Cellphone Repair</div>
-        <p class="service-desc">Screen replacement, charging port repair, battery replacement, and general mobile device
-          troubleshooting for various brands.</p>
-        <span class="order-badge"><i data-lucide="alert-circle"></i> Parts are order-based</span>
-        <div class="card-skills">
-          <span>Mobile Hardware</span>
-          <span>Peripheral Troubleshooting</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="computer" style="--delay: 3">
-        <div class="service-icon"><i data-lucide="disc"></i></div>
-        <div class="service-name">OS Installation</div>
-        <p class="service-desc">Clean installation of Windows 10/11 and other operating systems. Includes driver setup,
-          system configuration, and initial updates.</p>
-        <div class="card-skills">
-          <span>Windows OS Setup</span>
-          <span>System Maintenance</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="computer" style="--delay: 4">
-        <div class="service-icon"><i data-lucide="package-open"></i></div>
-        <div class="service-name">Office Software Installation</div>
-        <p class="service-desc">Installation of Microsoft Office (Word, Excel, PowerPoint, Outlook) and other
-          productivity software for home and business use.</p>
-        <div class="card-skills">
-          <span>Productivity Software</span>
-          <span>Microsoft Excel</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="computer" style="--delay: 5">
-        <div class="service-icon"><i data-lucide="fan"></i></div>
-        <div class="service-name">Hardware Cleaning &amp; Maintenance</div>
-        <p class="service-desc">Deep cleaning of internal components, dust removal, thermal paste replacement, fan
-          servicing, and preventive maintenance to extend device lifespan and prevent overheating.</p>
-        <div class="card-skills">
-          <span>Preventive Maintenance</span>
-          <span>PC Thermal Care</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="computer" style="--delay: 6">
-        <div class="service-icon"><i data-lucide="zap"></i></div>
-        <div class="service-name">Performance Upgrades</div>
-        <p class="service-desc">RAM upgrades, SSD installation to replace old hard drives, and system optimization to
-          breathe new life into slow or aging computers.</p>
-        <span class="order-badge"><i data-lucide="alert-circle"></i> Parts are order-based</span>
-        <div class="card-skills">
-          <span>SSD &amp; RAM Upgrades</span>
-          <span>System Optimization</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="computer" style="--delay: 7">
-        <div class="service-icon"><i data-lucide="shield-alert"></i></div>
-        <div class="service-name">Virus &amp; Malware Removal</div>
-        <p class="service-desc">Full system scan, malware and spyware elimination, browser cleanup, and antivirus setup
-          to protect your device going forward.</p>
-        <div class="card-skills">
-          <span>IT Support &amp; Security</span>
-          <span>Malware Cleanup</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="computer" style="--delay: 8">
-        <div class="service-icon"><i data-lucide="hard-drive"></i></div>
-        <div class="service-name">Data Backup &amp; Recovery</div>
-        <p class="service-desc">Recovery of lost or deleted files from failed hard drives and corrupted storage. Backup
-          setup to prevent future data loss.</p>
-        <div class="card-skills">
-          <span>File Recovery</span>
-          <span>Secure Data Backup</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="computer" style="--delay: 9">
-        <div class="service-icon"><i data-lucide="unlock"></i></div>
-        <div class="service-name">Windows Login Password Removal</div>
-        <p class="service-desc">Locked out of your Windows account? We provide safe and secure password removal and
-          account recovery services for Windows 10/11. Regain access to your computer quickly.</p>
-        <div class="card-skills">
-          <span>Windows OS Bypass</span>
-          <span>Account Recovery</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="computer" style="--delay: 10">
-        <div class="service-icon"><i data-lucide="file-check"></i></div>
-        <div class="service-name">Office &amp; Windows OS Licensing</div>
-        <p class="service-desc">We offer legitimate and affordable licenses for Microsoft Office (Word, Excel,
-          PowerPoint, Outlook) and Windows Operating Systems (Windows 10/11). Professional activation and support
-          included.</p>
-        <div class="card-skills">
-          <span>Software Licensing</span>
-          <span>Activation Support</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-
-      <!-- CCTV & SECURITY -->
-      <div class="service-card" data-category="cctv" style="--delay: 1; display: none;">
-        <div class="service-icon"><i data-lucide="cctv"></i></div>
-        <div class="service-name">CCTV Installation</div>
-        <p class="service-desc">Supply and installation of CCTV systems for homes, offices, and businesses. Includes
-          camera placement planning, wiring, DVR/NVR setup, and remote viewing via smartphone.</p>
-        <div class="card-skills">
-          <span>CCTV Systems</span>
-          <span>Structured Cabling</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="cctv" style="--delay: 2; display: none;">
-        <div class="service-icon"><i data-lucide="monitor"></i></div>
-        <div class="service-name">CCTV Monitoring Setup</div>
-        <p class="service-desc">Configuration of local and remote monitoring access. Setup of recording schedules,
-          motion detection alerts, and cloud or local storage options.</p>
-        <div class="card-skills">
-          <span>Surveillance Config</span>
-          <span>Remote App Setup</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="cctv" style="--delay: 3; display: none;">
-        <div class="service-icon"><i data-lucide="settings"></i></div>
-        <div class="service-name">CCTV Maintenance &amp; Repair</div>
-        <p class="service-desc">Troubleshooting existing CCTV systems, camera repositioning, cable repair, DVR/NVR
-          replacement or upgrades, and routine system health checks.</p>
-        <div class="card-skills">
-          <span>Preventive Maintenance</span>
-          <span>Incident Diagnostics</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-
-      <!-- NETWORKING & IT -->
-      <div class="service-card" data-category="network" style="--delay: 1; display: none;">
-        <div class="service-icon"><i data-lucide="network"></i></div>
-        <div class="service-name">Network Setup &amp; Configuration</div>
-        <p class="service-desc">Router and switch configuration, LAN/WAN setup, Wi-Fi deployment, IP addressing, and
-          network security for homes and business offices.</p>
-        <div class="card-skills">
-          <span>TCP/IP &amp; VLANs</span>
-          <span>DNS, DHCP, LAN/WAN</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="network" style="--delay: 2; display: none;">
-        <div class="service-icon"><i data-lucide="cable"></i></div>
-        <div class="service-name">Structured Cabling</div>
-        <p class="service-desc">Professional installation of Cat5e/Cat6 network cables, cable management, labeling,
-          patching, and wall outlet installation for clean and reliable connectivity.</p>
-        <div class="card-skills">
-          <span>Cabling &amp; Infrastructure</span>
-          <span>Jack Terminations</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="network" style="--delay: 3; display: none;">
-        <div class="service-icon"><i data-lucide="wifi"></i></div>
-        <div class="service-name">Wi-Fi Troubleshooting &amp; Optimization</div>
-        <p class="service-desc">Diagnosing slow or unstable internet, eliminating dead zones, access point installation,
-          and full wireless network optimization.</p>
-        <div class="card-skills">
-          <span>Wi-Fi Mesh &amp; APs</span>
-          <span>Troubleshooting</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="network" style="--delay: 4; display: none;">
-        <div class="service-icon"><i data-lucide="building-2"></i></div>
-        <div class="service-name">Office IT Setup</div>
-        <p class="service-desc">Complete office computer network setup — workstations, printer sharing, shared drives,
-          internet connection, and all IT infrastructure requirements for small to medium businesses.</p>
-        <div class="card-skills">
-          <span>End-User IT Support</span>
-          <span>Peripheral Setup</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="network" style="--delay: 5; display: none;">
-        <div class="service-icon"><i data-lucide="server"></i></div>
-        <div class="service-name">Systems &amp; Cloud Administration</div>
-        <p class="service-desc">Configure Windows Server, Active Directory, GPO access controls, and Microsoft 365 user
-          environments for centralized office management.</p>
-        <div class="card-skills">
-          <span>Windows Server &amp; GPO</span>
-          <span>Active Directory &amp; M365</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-      <div class="service-card" data-category="network" style="--delay: 6; display: none;">
-        <div class="service-icon"><i data-lucide="video"></i></div>
-        <div class="service-name">Livestreaming &amp; AV Configuration</div>
-        <p class="service-desc">Professional configuration of event livestreaming setups including OBS Studio, camera
-          captures, sound interfaces, and virtual conference spaces.</p>
-        <div class="card-skills">
-          <span>OBS Studio &amp; Mixers</span>
-          <span>AV Configuration</span>
-        </div>
-        <div class="service-arrow">→</div>
-      </div>
-    </div>
-
-    <div class="notice-box reveal">
-      <span class="notice-icon"><i data-lucide="clipboard-list"></i></span>
-      <div class="notice-text">
-        <strong>Parts Order Notice:</strong> For laptop, cellphone, and desktop repairs requiring replacement parts —
-        all parts are <strong>order-based</strong>. We will assess your device first, provide a quote, then order the
-        exact parts needed. Turnaround depends on part availability.
-      </div>
-    </div>
-  </section>
-
-  <section id="why">
-    <div class="section-tag reveal">// why choose us</div>
-    <div class="why-grid">
-      <div>
-        <h2 class="section-title reveal">Certified. Local.<br />Experienced.</h2>
-        <p class="section-sub reveal">Professional IT support and network systems engineering delivered directly to your home, office, or event space in Naga City by a certified specialist.</p>
-        <ul class="why-list">
-          <li class="why-item reveal">
-            <span class="why-icon"><i data-lucide="award"></i></span>
-            <div class="why-text">
-              <strong>Certified IT Support Specialist</strong>
-              <span>TESDA CSS NC II certified with academic background in Computer Science, ensuring high-quality, standardized IT operations.</span>
-            </div>
-          </li>
-          <li class="why-item reveal">
-            <span class="why-icon"><i data-lucide="map-pin"></i></span>
-            <div class="why-text">
-              <strong>Direct Local Support</strong>
-              <span>Based in Brgy. Carolina, Naga City — supporting 300+ end users across 30+ sites in Camarines Sur with rapid onsite support.</span>
-            </div>
-          </li>
-          <li class="why-item reveal">
-            <span class="why-icon"><i data-lucide="cpu"></i></span>
-            <div class="why-text">
-              <strong>Enterprise to Home Solutions</strong>
-              <span>Covering PC diagnostics, CCTV installations, enterprise domain setups (AD/GPO), structured cabling, and professional livestreaming.</span>
-            </div>
-          </li>
-          <li class="why-item reveal">
-            <span class="why-icon"><i data-lucide="handshake"></i></span>
-            <div class="why-text">
-              <strong>Transparent Upfront Pricing</strong>
-              <span>Free diagnostic assessments with clear pricing, negotiable project-based rates, and direct communication with zero middleman hassle.</span>
-            </div>
+        <!-- Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about-anchor">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#about">Contact</a></li>
+          <!-- Mobile-only CTA -->
+          <li>
+            <a href="#about" class="btn btn-primary nav-cta-mobile" style="display:none;">Request IT Assistance</a>
           </li>
         </ul>
 
-        <!-- SERVICE AREA CHECKER -->
-        <div class="area-checker reveal">
-          <span class="ac-title"><i data-lucide="map-pin"></i> Service Area Checker</span>
-          <p class="ac-desc">Enter your Naga City barangay to see if we offer direct on-site visits:</p>
-          <div class="ac-input-row">
-            <input type="text" id="areaInput" placeholder="e.g. Pacol, San Felipe, Carolina..." list="barangayList"
-              autocomplete="off" />
-            <datalist id="barangayList">
-              <option value="Carolina"></option>
-              <option value="Pacol"></option>
-              <option value="San Felipe"></option>
-              <option value="Cararayan"></option>
-              <option value="Concepcion Grande"></option>
-              <option value="Concepcion Pequeña"></option>
-              <option value="Del Rosario"></option>
-              <option value="Dayangdang"></option>
-              <option value="Balatas"></option>
-              <option value="Magsaysay"></option>
-              <option value="Panicuason"></option>
-              <option value="San Isidro"></option>
-            </datalist>
-            <button id="checkAreaBtn" class="ac-btn">Check Area</button>
-          </div>
-          <div id="checkerResult" class="ac-result"></div>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="terminal-box">
-          <div class="terminal-bar">
-            <div class="t-dot td1"></div>
-            <div class="t-dot td2"></div>
-            <div class="t-dot td3"></div>
-            <span class="terminal-title">jerson — status.sh</span>
-          </div>
-          <div class="terminal-body">
-            <div><span class="t-prompt">$</span> <span class="t-cmd">connect --technician jerson</span></div>
-            <div><span class="t-ok">✓</span> <span class="t-cmd">Connected: Jerson, Carolina Tech</span></div>
-            <div><span class="t-out">→ Brgy. Carolina, Naga City, CamSur</span></div>
-            <div>&nbsp;</div>
-            <div><span class="t-prompt">$</span> <span class="t-cmd">list services --all</span></div>
-            <div><span class="t-ok">✓</span> <span class="t-cmd">Computer Repair &amp; Upgrades ... ACTIVE</span></div>
-            <div><span class="t-ok">✓</span> <span class="t-cmd">OS &amp; Software Config ......... ACTIVE</span></div>
-            <div><span class="t-ok">✓</span> <span class="t-cmd">CCTV Surveillance Setup ...... ACTIVE</span></div>
-            <div><span class="t-ok">✓</span> <span class="t-cmd">Network Setup &amp; Config ....... ACTIVE</span></div>
-            <div><span class="t-ok">✓</span> <span class="t-cmd">Structured Cabling ........... ACTIVE</span></div>
-            <div><span class="t-ok">✓</span> <span class="t-cmd">Systems &amp; Cloud Admin ........ ACTIVE</span></div>
-            <div><span class="t-ok">✓</span> <span class="t-cmd">Livestream &amp; AV Config ....... ACTIVE</span></div>
-            <div>&nbsp;</div>
-            <div><span class="t-prompt">$</span> <span class="t-cmd">check availability</span></div>
-            <div><span class="t-ok">✓</span> <span class="t-cmd">Status: AVAILABLE</span></div>
-            <div><span class="t-out">→ 0949 643 7357 | jermaje@gmail.com</span></div>
-            <div><span class="t-prompt">$</span> <span class="t-cursor"></span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- Desktop CTA -->
+        <a href="#about" class="nav-cta">Request IT Assistance</a>
 
-  <!-- ABOUT THE TECHNICIAN SECTION -->
-  <section id="about">
-    <div class="section-tag reveal">// meet the technician</div>
-    <h2 class="section-title reveal">The Person Behind the Fix</h2>
-    <p class="section-sub reveal">Professional IT Support Specialist and Network Technician based in Naga City, Camarines Sur.</p>
-
-    <div class="about-wrapper reveal">
-
-      <!-- LEFT: Identity Panel -->
-      <div class="about-identity-panel">
-        <div class="about-avatar-ring">
-          <div class="about-avatar-glow"></div>
-          <div class="about-avatar-xl">JJ</div>
-        </div>
-        <h3 class="about-name-xl">Jerson M. Jemenez</h3>
-        <span class="about-role-badge"><i data-lucide="shield-check"></i> IT Technical Support Specialist</span>
-        <span class="about-location"><i data-lucide="map-pin"></i> Naga City, Camarines Sur</span>
-
-        <div class="about-identity-stats">
-          <div class="id-stat">
-            <span class="id-stat-num">10+</span>
-            <span class="id-stat-label">Years Exp.</span>
-          </div>
-          <div class="id-stat-divider"></div>
-          <div class="id-stat">
-            <span class="id-stat-num">300+</span>
-            <span class="id-stat-label">Users Served</span>
-          </div>
-          <div class="id-stat-divider"></div>
-          <div class="id-stat">
-            <span class="id-stat-num">30+</span>
-            <span class="id-stat-label">Gov't Sites</span>
-          </div>
-        </div>
-
-        <div class="about-contact-links">
-          <a href="tel:09496437357" class="about-contact-pill"><i data-lucide="phone"></i> 0949 643 7357</a>
-          <a href="mailto:jermaje@gmail.com" class="about-contact-pill"><i data-lucide="mail"></i> jermaje@gmail.com</a>
-        </div>
-      </div>
-
-      <!-- RIGHT: Content Panel -->
-      <div class="about-content-panel">
-
-        <p class="about-bio">
-          With hands-on experience in technical support, systems administration, and network engineering, Jerson manages
-          IT infrastructure across multiple government sites. Whether setting up complex office network configurations,
-          structured cabling, or installing security camera systems — he delivers robust solutions to homes and
-          businesses across Camarines Sur.
-        </p>
-
-        <!-- Skill Bars -->
-        <div class="about-skills-section">
-          <h4 class="about-section-label"><i data-lucide="bar-chart-2"></i> Technical Proficiency</h4>
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <div class="skill-bar-meta"><span>Hardware Repair &amp; Diagnostics</span><span>95%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" style="--skill-pct: 95%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-meta"><span>Network Setup &amp; Configuration</span><span>90%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" style="--skill-pct: 90%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-meta"><span>Windows Server &amp; Active Directory</span><span>85%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" style="--skill-pct: 85%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-meta"><span>CCTV &amp; Security Systems</span><span>88%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" style="--skill-pct: 88%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-meta"><span>Livestreaming &amp; AV Systems</span><span>80%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" style="--skill-pct: 80%"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Credential Timeline -->
-        <div class="about-credentials-section">
-          <h4 class="about-section-label"><i data-lucide="award"></i> Credentials &amp; Education</h4>
-          <div class="cred-timeline">
-            <div class="cred-tl-item">
-              <div class="cred-tl-dot"><i data-lucide="scroll"></i></div>
-              <div class="cred-tl-body">
-                <strong>TESDA CSS NC II Certified</strong>
-                <span>Competencies in IT hardware, networking, and system maintenance · Valid 2022–2027</span>
-              </div>
-            </div>
-            <div class="cred-tl-item">
-              <div class="cred-tl-dot"><i data-lucide="graduation-cap"></i></div>
-              <div class="cred-tl-body">
-                <strong>BS in Computer Science</strong>
-                <span>Tanauan Institute, Inc. · Class of 2014</span>
-              </div>
-            </div>
-            <div class="cred-tl-item">
-              <div class="cred-tl-dot cred-tl-dot--pending"><i data-lucide="zap"></i></div>
-              <div class="cred-tl-body">
-                <strong>CompTIA Network+ <span class="cred-in-progress">In Progress</span></strong>
-                <span>Preparing for certification to expand expertise in Network Engineering and NOC Operations.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Skill Tags -->
-        <div class="about-tags-section">
-          <span class="about-tag">Windows Server</span>
-          <span class="about-tag">Active Directory</span>
-          <span class="about-tag">TCP/IP</span>
-          <span class="about-tag">VLANs</span>
-          <span class="about-tag">DNS / DHCP</span>
-          <span class="about-tag">CCTV</span>
-          <span class="about-tag">Microsoft 365</span>
-          <span class="about-tag">Structured Cabling</span>
-          <span class="about-tag">OBS &amp; AV</span>
-          <span class="about-tag">PC Repair</span>
-        </div>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
       </div>
     </div>
-  </section>
+  </nav>
 
+  <!-- ═══════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <!-- Particle canvas -->
+    <canvas id="hero-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
 
-  <!-- TESTIMONIALS SECTION -->
-  <section id="testimonials">
-    <div class="section-tag reveal">// customer love</div>
-    <h2 class="section-title reveal">What Our Clients Say</h2>
-    <p class="section-sub reveal">Real feedback from homes and small businesses in Naga City.</p>
-
-    <div class="testimonials-slider-container reveal">
-      <button class="slider-btn prev-btn" id="slidePrev" aria-label="Previous testimonials">&#8592;</button>
-
-      <div class="testimonials-track" id="testimonialsTrack">
-        <!-- Card 1 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar purple">JS</div>
-            <div>
-              <div class="testi-name">Jerome S.</div>
-              <div class="testi-location">Brgy. Pacol, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Grabe an bagal kan laptop ko dati, pirmi pang nagha-hang. Pinadara ko digdi sa
-            CarolinaTECH Technician tapos in-upgrade ninda sa SSD. Ngonian murayday na maray, garo bagong bakal!"</p>
-          <span class="testi-tag">Computer Upgrade</span>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar emerald">MK</div>
-            <div>
-              <div class="testi-name">Maria K.</div>
-              <div class="testi-location">Brgy. Carolina, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Magayon an pagka-install kan CCTV sa tindahan mi kan CarolinaTECH Technician. Malinig
-            an wiring, mayong nakakalaylay na kable. Mas nagustuhan ko ta na-set up man sa phone ko kaya nababantayan ko
-            maski hain ako."</p>
-          <span class="testi-tag">CCTV Installation</span>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar blue">MT</div>
-            <div>
-              <div class="testi-name">Mark T.</div>
-              <div class="testi-location">Magsaysay Ave, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Sakit mi talaga duman sa opisina su Wi-Fi na pirmi na sanang nagdidiskonekta. Pwera
-            biro, kan pig-mesh network kan CarolinaTECH Technician, solve an problema! Daing hassle ngonian."</p>
-          <span class="testi-tag">Wi-Fi Optimization</span>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar purple">SL</div>
-            <div>
-              <div class="testi-name">Sarah L.</div>
-              <div class="testi-location">Brgy. San Felipe, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Nabasag ko screen kan cellphone ko tapos malapit na man magadan battery. Nadara ko
-            digdi sa CarolinaTECH Technician, wala pang 2 hours gibo na dayon. Mas nakakatipid kumpara sa iba!"</p>
-          <span class="testi-tag">Cellphone Repair</span>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar emerald">DC</div>
-            <div>
-              <div class="testi-name">David C.</div>
-              <div class="testi-location">Brgy. Del Rosario, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Salamat na maray sa pagka-setup kan workstations asin printer sa opisina mi kan
-            CarolinaTECH Technician. Solidong trabaho, mayo ka nang hahanapon pa. Daing ribok, madaling kausap."</p>
-          <span class="testi-tag">Office IT Setup</span>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar blue">ER</div>
-            <div>
-              <div class="testi-name">Elena R.</div>
-              <div class="testi-location">Brgy. Concepcion Grande, Naga</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Naghahanap ako ki murang lisensya para sa Windows 11 saka MS Office kan laptop ko.
-            Tinabangan ako kan CarolinaTECH Technician mag-activate. Dawa titser ako, daing ribok na inasikaso."</p>
-          <span class="testi-tag">OS Licensing</span>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar purple">JM</div>
-            <div>
-              <div class="testi-name">Jose M.</div>
-              <div class="testi-location">Brgy. Cararayan, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Nalingawan ko password kan laptop ko, nalisang ako ta andun gabos na files ko. Dinara
-            ko sa CarolinaTECH Technician, mayong 30 minutes nabuksan ninda dayon! Salamat ta daing nawarang files."</p>
-          <span class="testi-tag">Password Reset</span>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar emerald">KV</div>
-            <div>
-              <div class="testi-name">Kiko V.</div>
-              <div class="testi-location">Brgy. Dayangdang, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Aba, akala ko nawara na su mga lumang ritrato kan pamilya mi sa sirang na hard drive.
-            Na-recover kan CarolinaTECH Technician gabos! Sobrang salamat po saindo, talagang maasahan."</p>
-          <span class="testi-tag">Data Recovery</span>
-        </div>
-
-        <!-- Card 9 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar blue">AP</div>
-            <div>
-              <div class="testi-name">Ana P.</div>
-              <div class="testi-location">Brgy. Liboton, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Nag-o-overheat su gaming PC ko pag nagkawat Valorant. Lininisan kan CarolinaTECH
-            Technician, linatagan bagong thermal paste, pinalitan fan. Ngonian malipot na maray, daing lag pag
-            nagkakawat."</p>
-          <span class="testi-tag">PC Maintenance</span>
-        </div>
-
-        <!-- Card 10 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar purple">LB</div>
-            <div>
-              <div class="testi-name">Lito B.</div>
-              <div class="testi-location">Brgy. Bagumbayan, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Nagkaag su CarolinaTECH Technician surveillance cameras sa bodega mi. An linaw kan
-            night vision, tapos may alert pa sa phone ko pag may naglalakaw. Daing worry maski banggi."</p>
-          <span class="testi-tag">CCTV Installation</span>
-        </div>
-
-        <!-- Card 11 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar emerald">GD</div>
-            <div>
-              <div class="testi-name">Grace D.</div>
-              <div class="testi-location">Brgy. Lerma, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Daing buhay talaga su laptop ko, akala ko bibili na naman ako bago. Sabi kan
-            CarolinaTECH Technician shorted daa su motherboard. Nabilog ninda man, mas nakatipid ako."</p>
-          <span class="testi-tag">Computer Repair</span>
-        </div>
-
-        <!-- Card 12 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar blue">RG</div>
-            <div>
-              <div class="testi-name">Ryan G.</div>
-              <div class="testi-location">Brgy. Calauag, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Insalak kan CarolinaTECH Technician su mesh Wi-Fi ninda ta maluya su router kan PLDT.
-            Daing buffer maski mag-stream 4K sa ikaduwang coating. Sulit an bayad po."</p>
-          <span class="testi-tag">Wi-Fi Mesh Setup</span>
-        </div>
-
-        <!-- Card 13 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar purple">CM</div>
-            <div>
-              <div class="testi-name">Charee M.</div>
-              <div class="testi-location">Brgy. Peñafrancia, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Nagpa-cabling kami sa CarolinaTECH Technician para sa study hub. Ang linis tignan,
-            daing mga kable na nakasablay. Mabilis pa an internet sa lambang table kan mga estudyante."</p>
-          <span class="testi-tag">Structured Cabling</span>
-        </div>
-
-        <!-- Card 14 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar emerald">JT</div>
-            <div>
-              <div class="testi-name">Jun T.</div>
-              <div class="testi-location">Brgy. Sabang, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Daming virus kan PC ko dulo sa mga download. Grabe an pop-ups saka an bagal. Nilinis
-            kan CarolinaTECH Technician gabos tapos tinabangan akong mag-setup nin safe na browser. Ngayon okey na okey
-            na."</p>
-          <span class="testi-tag">Virus Removal</span>
-        </div>
-
-        <!-- Card 15 -->
-        <div class="testi-card">
-          <div class="testi-header">
-            <div class="testi-avatar blue">RO</div>
-            <div>
-              <div class="testi-name">Ramon O.</div>
-              <div class="testi-location">Brgy. Triangulo, Naga City</div>
-            </div>
-            <div class="testi-rating">★★★★★</div>
-          </div>
-          <p class="testi-text">"Pina-setup mi sa CarolinaTECH Technician su wireless printer sa tindahan para makaprint
-            gabos dawa gamit laptop. Madalion na mag-print ngonian, daing ribok na saksak-saksak."</p>
-          <span class="testi-tag">Printer Sharing</span>
-        </div>
-      </div>
-
-      <button class="slider-btn next-btn" id="slideNext" aria-label="Next testimonials">&#8594;</button>
+    <!-- Right: hero image -->
+    <div class="hero-bg-image">
+      <img src="assets/images/hero-tech.jpg"
+        alt="IT technician repairing a desktop computer with blue lighting"
+        loading="eager" />
+      <div class="hero-blue-glow"></div>
     </div>
-  </section>
 
-  <section id="process">
-    <div class="section-tag reveal">// how it works</div>
-    <h2 class="section-title reveal">Simple 4-Step Process</h2>
-    <p class="section-sub reveal">From your first message to a fully working device or setup.</p>
-    <div class="process-steps reveal">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-name">Reach Out</div>
-        <p class="step-desc">Call, text, or message us. Describe your issue and we'll respond quickly.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-name">Free Assessment</div>
-        <p class="step-desc">We check your device or site, identify the problem, and give an honest quote.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-name">We Get to Work</div>
-        <p class="step-desc">Once approved, we repair, install, or configure — efficiently and carefully.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-name">Done &amp; Tested</div>
-        <p class="step-desc">Everything is tested before handover. We make sure you're satisfied before we leave.</p>
-      </div>
-    </div>
-  </section>
+    <div class="container">
+      <div class="hero-inner">
 
-  <!-- COST ESTIMATOR SECTION -->
-  <section id="estimator">
-      <div class="section-tag reveal">// cost calculator</div>
-      <h2 class="section-title reveal">Estimate Your Service Cost</h2>
-      <p class="section-sub reveal">Select your service needs below to calculate an instant base service labor estimate.
-      </p>
+        <!-- Left: content -->
+        <div class="hero-content">
 
-      <div class="estimator-container reveal">
-        <div class="est-controls">
-          <label for="estCategory">Select Device / Category</label>
-          <select id="estCategory">
-            <option value="computer">Computer &amp; Device Services</option>
-            <option value="cctv">CCTV &amp; Security Services</option>
-            <option value="network">Networking &amp; IT Services</option>
-          </select>
-
-          <div class="est-services-checklist" id="estServicesChecklist">
-            <!-- Checkboxes will be injected dynamically via JS -->
-          </div>
-
-          <div id="estMaterialsContainer" style="display: none; margin-top: 24px;">
-            <label class="est-section-label"
-              style="font-family: var(--font-head); font-size: 13px; font-weight: 700; color: var(--text); display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em;">CCTV
-              Consumables &amp; Materials (Optional)</label>
-            <p class="est-section-note"
-              style="font-size: 11.5px; color: var(--muted); margin: 0 0 12px 0; line-height: 1.4;"><i data-lucide="info"></i>
-              <strong>Note:</strong> Material prices are dynamic, subject to market availability, and vary based on the
-              specific brand/model selected. All material pricing is negotiable.
-            </p>
-            <div class="est-services-checklist" id="estMaterialsChecklist">
-              <!-- CCTV Consumables will be injected here -->
-            </div>
-          </div>
-        </div>
-
-        <div class="est-summary">
-          <div class="est-summary-card">
-            <span class="est-sum-title">Estimate Summary</span>
-            <div class="est-sum-breakdown" id="estSumBreakdown">
-              <div class="est-empty-msg">No services selected yet.</div>
-            </div>
-            <div class="est-sum-divider"></div>
-            <div id="estTotalContainer">
-              <div class="est-sum-total">
-                <span>Estimated Labor:</span>
-                <span class="total-price" id="estTotalVal">₱0</span>
-              </div>
-            </div>
-            <button id="bookEstimateBtn" class="est-book-btn" style="margin-top: 16px; margin-bottom: 12px;" disabled>
-              Book Service with Estimate →
-            </button>
-            <p class="est-disclaimer" id="estDisclaimer"><i data-lucide="alert-circle"></i> <strong>Notice:</strong> CCTV prices indicate the installation/labor fee per
-              camera unit. Camera units, main units (DVR/NVR), and consumable materials are NOT included in labor rates
-              and are charged separately. Services marked as <strong>Negotiable</strong> can be adjusted based on
-              project size/scope.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="section-tag reveal">// faq</div>
-      <h2 class="section-title reveal">Frequently Asked Questions</h2>
-      <p class="section-sub reveal">Got questions? Here are the ones we hear most often.</p>
-      <div class="faq-list reveal">
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            How long does a typical repair take?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            It depends on the issue. Simple repairs like OS installation, virus removal, or software setup are usually
-            done same-day. Hardware repairs may take longer if parts need to be ordered — we'll always give you a clear
-            timeframe after assessment.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            Do you charge for diagnosis / assessment?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            No — diagnosis is free. We check your device first, identify the problem, and give you a quote. You only pay
-            when you approve the repair or service.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            Why are parts order-based for laptop, cellphone, and desktop repairs?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            We source the correct parts specific to your device model to ensure quality and compatibility. Rather than
-            keeping a large stock of parts that may not match your unit, we order exactly what's needed after diagnosing
-            your device. This ensures better results and fair pricing.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            Can you come to my home or office?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes! We offer on-site services for CCTV installation, networking, cabling, and office IT setup. For device
-            repairs, you can bring your unit to us in Brgy. Carolina, or we can arrange a visit depending on the
-            situation.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            What areas do you serve?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            We are based in Brgy. Carolina, Naga City and primarily serve clients within Naga City and nearby
-            municipalities in Camarines Sur. Contact us to check if we can reach your area.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            Do you install CCTV for homes, not just businesses?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            Absolutely. We install CCTV systems for both residential and commercial clients. Whether it's a single
-            camera
-            for your front door or a full multi-camera setup for an office or store, we'll design the right solution for
-            you.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            How do I get started or request a service?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            Just message us on WhatsApp, call/text 0949 643 7357, email jermaje@gmail.com, or fill out the contact form
-            below. Describe your issue and we'll get back to you as soon as possible.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            Can you help if I'm locked out of my Windows account?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes! We specialize in safe Windows login password removal and account recovery for Windows 10/11. If you've
-            forgotten your password or are locked out of your computer, we can help you regain access quickly without
-            data
-            loss.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            Are your Office and Windows licenses legitimate?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            Absolutely. We offer genuine, legitimate licenses for Microsoft Office and Windows Operating Systems. All
-            licenses come with proper activation and official support. We believe in legal and affordable solutions for
-            everyone.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            What payment methods do you accept?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            We accept cash, bank transfers, online payment apps (GCash, PayMaya), and installment plans for larger
-            projects. We'll discuss payment options with you after providing a quote. For online orders or licensing,
-            we'll confirm payment methods when you contact us.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            Do you provide warranty or guarantee on repairs and services?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes! We stand behind our work. Most repairs and services come with a warranty period. We'll discuss the
-            specific warranty details when we provide your quote. If anything goes wrong within the warranty period,
-            we'll
-            fix it at no additional cost.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            How much does your service usually cost?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            Prices vary depending on the service and complexity of the issue. Computer repairs start from ₱200-₱1,500+,
-            CCTV installations depend on system size, and networking services vary by scope. We always provide a free
-            assessment and detailed quote before starting any work — no hidden charges.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            Do you offer enterprise systems administration and Microsoft 365 setup for offices?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes! We configure Windows Server, Active Directory, Group Policy Objects (GPOs), and user permissions to
-            centralize management for business offices. We also assist with Microsoft 365 licensing, migration, custom
-            email setup, and security access controls to keep your enterprise environment running smoothly and securely.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            Can you help set up professional livestreaming and audio-visual equipment?
-            <span class="faq-arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            Absolutely. We configure high-quality livestream setups for virtual conferences, local churches, corporate
-            events, and content creators. We set up OBS Studio, connect camera captures, configure audio interfaces,
-            route microphones, and optimize network settings to ensure stable, high-definition streaming with clear
-            audio and zero dropped frames.
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="section-tag reveal">// contact</div>
-      <h2 class="section-title reveal">Get in Touch</h2>
-      <p class="section-sub reveal">Located in Brgy. Carolina, Naga City. Reach out anytime — we respond fast.</p>
-      <div class="contact-wrap">
-        <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
-          <!-- WEB3FORMS CONFIG -->
-          <input type="hidden" name="access_key" value="c2e04546-3172-4232-a0ce-8bf85a8535b5">
-          <input type="hidden" name="subject" value="New Inquiry from Carolina Tech Website">
-          <input type="hidden" name="from_name" value="Carolina Tech Website">
-
-          <div class="form-row">
-            <div>
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required />
-            </div>
-            <div>
-              <label for="phone">Contact Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX" />
-            </div>
-          </div>
-          <div>
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="yourname@email.com" />
-          </div>
-          <div>
-            <label for="service">Service Needed</label>
-            <select id="service" name="service">
-              <option value="">Select a service...</option>
-              <optgroup label="Computer &amp; Device">
-                <option>Desktop / Laptop Repair</option>
-                <option>Cellphone Repair</option>
-                <option>OS Installation</option>
-                <option>Office Software Installation</option>
-                <option>Hardware Cleaning &amp; Maintenance</option>
-                <option>Performance Upgrade (RAM / SSD)</option>
-                <option>Virus &amp; Malware Removal</option>
-                <option>Data Backup &amp; Recovery</option>
-                <option>Windows Login Password Removal</option>
-                <option>Office &amp; Windows OS Licensing</option>
-              </optgroup>
-              <optgroup label="CCTV &amp; Security">
-                <option>CCTV Installation</option>
-                <option>CCTV Monitoring Setup</option>
-                <option>CCTV Maintenance / Repair</option>
-              </optgroup>
-              <optgroup label="Networking &amp; Office IT">
-                <option>Network Setup &amp; Configuration</option>
-                <option>Structured Cabling</option>
-                <option>Wi-Fi Troubleshooting</option>
-                <option>Office IT Setup</option>
-                <option>Systems &amp; Cloud Administration</option>
-                <option>Livestreaming &amp; AV Configuration</option>
-              </optgroup>
-              <option>Other / Not Sure</option>
-            </select>
-          </div>
-          <div>
-            <label for="msg">Describe Your Issue or Request</label>
-            <textarea id="msg" name="message" placeholder="Tell us what you need help with..."></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Send Message →</button>
-          <!-- Removed formsubmit captcha field -->
-        </form>
-
-        <div class="contact-info reveal">
-          <div class="info-item">
-            <span class="info-icon"><i data-lucide="map-pin"></i></span>
-            <div>
-              <div class="info-label">Address</div>
-              <div class="info-val">Brgy. Carolina, Naga City<br />Camarines Sur, Philippines</div>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="info-icon"><i data-lucide="phone"></i></span>
-            <div>
-              <div class="info-label">Mobile / SMS</div>
-              <div class="info-val"><a href="tel:09496437357">0949 643 7357</a></div>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="info-icon"><i data-lucide="mail"></i></span>
-            <div>
-              <div class="info-label">Email</div>
-              <div class="info-val"><a href="mailto:jermaje@gmail.com">jermaje@gmail.com</a></div>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="info-icon"><i data-lucide="clock"></i></span>
-            <div>
-              <div class="info-label">Hours</div>
-              <div class="info-val">Mon – Sat: 8:00 AM – 6:00 PM<br />Sun: By Appointment</div>
-            </div>
-          </div>
-          <div class="map-note">
-            <span><i data-lucide="pin"></i></span>
-            <span>Serving Brgy. Carolina, Naga City, and surrounding areas in Camarines Sur.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FLOATING CHAT BUTTONS -->
-    <div class="floating-socials" id="floatingSocials">
-      <div class="fs-menu" id="fsMenu">
-        <a class="fs-btn fb-btn" href="https://www.facebook.com/carolinatechnician" target="_blank" rel="noopener"
-          title="Visit Facebook Page">
-          <span class="fs-icon"><i data-lucide="facebook"></i></span>
-          <span class="fs-text">Facebook Page</span>
-        </a>
-        <a class="fs-btn sms-btn" href="sms:+639496437357" title="Send SMS">
-          <span class="fs-icon"><i data-lucide="message-square-text"></i></span>
-          <span class="fs-text">SMS</span>
-        </a>
-        <a class="fs-btn viber-btn" href="viber://chat?number=639496437357" target="_blank" rel="noopener"
-          title="Chat on Viber">
-          <span class="fs-icon"><i data-lucide="phone"></i></span>
-          <span class="fs-text">Viber</span>
-        </a>
-        <a class="fs-btn wa-btn"
-          href="https://wa.me/639496437357?text=Hi%20Carolina%20Technician!%20I%20need%20help%20with%20my%20device."
-          target="_blank" rel="noopener" title="Chat on WhatsApp">
-          <span class="fs-icon"><i data-lucide="message-circle"></i></span>
-          <span class="fs-text">WhatsApp</span>
-        </a>
-        <a class="fs-btn messenger-btn" href="https://m.me/carolinatechnician" target="_blank" rel="noopener"
-          title="Chat on Messenger">
-          <span class="fs-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              <path d="M8.5 14l3.5-4 2.5 3 4.5-5"/>
-            </svg>
+          <span class="hero-badge">
+            <span class="badge-dot"></span>
+            Reliable IT Solutions for Homes &amp; Businesses
           </span>
-          <span class="fs-text">Messenger</span>
-        </a>
-      </div>
-      <button class="fs-trigger" id="fsTrigger" aria-label="Toggle contact menu" title="Contact Us">
-        <div class="fs-pulse"></div>
-        <span class="trigger-icon open-icon"><i data-lucide="message-circle"></i></span>
-        <span class="trigger-icon close-icon"><i data-lucide="x"></i></span>
-      </button>
-    </div>
 
-    <footer>
-      <div class="footer-logo">Carolina<span class="ct">Tech</span></div>
-      <div class="footer-copy">© 2026 Carolina Technician · Naga City, Camarines Sur</div>
-      <div class="footer-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </footer>
+          <h1 class="hero-h1">
+            Technology<br />
+            Solutions<br />
+            <span class="blue-line">You Can Trust</span>
+          </h1>
 
-    <!-- DETAIL MODAL OVERLAY -->
-    <div class="service-modal" id="serviceModal" aria-hidden="true">
-      <div class="modal-backdrop" id="modalBackdrop"></div>
-      <div class="modal-content">
-        <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
-        <div class="modal-icon-wrapper" id="modalIcon"></div>
-        <h3 class="modal-title" id="modalTitle">Service Details</h3>
-        <p class="modal-description" id="modalDesc">Detailed description goes here...</p>
+          <p class="hero-desc">
+            Professional IT services including computer repair, networking, CCTV installation,
+            printer repair, web development, and business technology solutions.
+          </p>
 
-        <div class="modal-details-grid">
-          <div class="modal-detail-item">
-            <span class="md-label"><i data-lucide="clock"></i> Turnaround Time</span>
-            <span class="md-value" id="modalTime">1-2 Hours</span>
+          <div class="hero-btns">
+            <a href="#about" class="btn btn-primary btn-lg">
+              Request IT Assistance
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <!-- Contact Bubble Trigger -->
+            <div class="contact-bubble-wrap" id="contactBubbleWrap">
+              <button class="btn btn-secondary btn-lg" id="contactBubbleBtn"
+                type="button" aria-expanded="false" aria-haspopup="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.9 19.79 19.79 0 0 1 1.61 3.27 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l1.27-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                Contact Us
+                <svg class="bubble-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="18 15 12 9 6 15" />
+                </svg>
+              </button>
+
+              <!-- Popup bubble -->
+              <div class="contact-bubble-popup" id="contactBubblePopup" role="menu" aria-label="Contact options">
+                <div class="bubble-arrow"></div>
+
+                <!-- Viber -->
+                <a href="viber://chat?number=+639496437357" class="cbi-item" role="menuitem">
+                  <div class="cbi-icon" style="background:#7360F2;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                      fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.9 19.79 19.79 0 0 1 1.61 3.27 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l1.27-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                      <path d="M14.5 6.5c1 .33 1.8 1.13 2.13 2.12M16.5 4.5A6 6 0 0 1 19.5 7.5" />
+                    </svg>
+                  </div>
+                  <div class="cbi-info">
+                    <span class="cbi-name">Viber</span>
+                    <span class="cbi-sub">0949 643 7357</span>
+                  </div>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/639496437357" class="cbi-item" role="menuitem"
+                  target="_blank" rel="noopener noreferrer">
+                  <div class="cbi-icon" style="background:#25D366;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                    </svg>
+                  </div>
+                  <div class="cbi-info">
+                    <span class="cbi-name">WhatsApp</span>
+                    <span class="cbi-sub">0949 643 7357</span>
+                  </div>
+                </a>
+
+                <!-- Call / SMS -->
+                <a href="tel:+639496437357" class="cbi-item" role="menuitem">
+                  <div class="cbi-icon" style="background:#2563EB;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                      fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.9 19.79 19.79 0 0 1 1.61 3.27 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l1.27-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                  </div>
+                  <div class="cbi-info">
+                    <span class="cbi-name">Call / SMS</span>
+                    <span class="cbi-sub">0949 643 7357</span>
+                  </div>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/carolinatechnician" class="cbi-item" role="menuitem"
+                  target="_blank" rel="noopener noreferrer">
+                  <div class="cbi-icon" style="background:#1877F2;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                  </div>
+                  <div class="cbi-info">
+                    <span class="cbi-name">Facebook</span>
+                    <span class="cbi-sub">carolinatechnician</span>
+                  </div>
+                </a>
+
+              </div><!-- /contact-bubble-popup -->
+            </div><!-- /contact-bubble-wrap -->
           </div>
-          <div class="modal-detail-item">
-            <span class="md-label"><i data-lucide="credit-card"></i> Labor Pricing</span>
-            <span class="md-value" id="modalPrice">Starts at ₱500</span>
+
+          <!-- Trust indicators -->
+          <div class="trust-list">
+            <span class="trust-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              Fast Response
+            </span>
+            <span class="trust-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              Certified Technicians
+            </span>
+            <span class="trust-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              Affordable Pricing
+            </span>
+          </div>
+        </div>
+        <!-- /hero-content -->
+
+        <!-- Right column: empty — hero image is absolute positioned -->
+        <div aria-hidden="true"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STATS BAR
+       ═══════════════════════════════════════════════════════ -->
+  <section id="stats">
+    <div class="container" style="padding:0;max-width:100%;">
+      <div class="stats-grid" style="max-width:var(--container);margin:0 auto;">
+        <div class="stat-item reveal">
+          <div class="stat-num">
+            <span data-count="500">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label-text">Happy Clients</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">
+            <span data-count="24">0</span><span class="stat-suffix">h</span>
+          </div>
+          <div class="stat-label-text">Fast Turnaround</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">
+            <span data-count="98">0</span><span class="stat-suffix">%</span>
+          </div>
+          <div class="stat-label-text">Client Satisfaction</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">
+            <span data-count="10">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label-text">Years of Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SERVICES SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section id="services">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+          What We Offer
+        </span>
+        <h2 class="section-title">Complete IT Solutions for Every Need</h2>
+        <p class="section-desc">
+          From hardware repairs to network infrastructure, we deliver comprehensive technology
+          services tailored to your requirements.
+        </p>
+      </div>
+
+      <div class="services-grid stagger">
+
+        <!-- 1. Computer Repair -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
+          </div>
+          <h3 class="service-title">Computer Repair</h3>
+          <p class="service-desc">Diagnosis and repair of desktop computers — hardware failures, OS issues, and performance optimization.</p>
+        </div>
+
+        <!-- 2. Laptop Repair -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
+            </svg>
+          </div>
+          <h3 class="service-title">Laptop Repair</h3>
+          <p class="service-desc">Screen replacements, keyboard repairs, battery replacements, and motherboard-level troubleshooting.</p>
+        </div>
+
+        <!-- 3. Network Setup -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0" />
+              <circle cx="12" cy="20" r="1" fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="service-title">Network Setup</h3>
+          <p class="service-desc">Residential and commercial network planning, router/switch configuration, and wireless coverage optimization.</p>
+        </div>
+
+        <!-- 4. Structured Cabling -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 9h16M4 15h16M10 3 8 21M14 3l2 18" />
+            </svg>
+          </div>
+          <h3 class="service-title">Structured Cabling</h3>
+          <p class="service-desc">Professional Cat5e/Cat6 cable runs, termination, patch panels, and tidy cable management for any facility.</p>
+        </div>
+
+        <!-- 5. CCTV Installation -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m23 7-7 5 7 5V7z" />
+              <rect x="1" y="5" width="15" height="14" rx="2" />
+            </svg>
+          </div>
+          <h3 class="service-title">CCTV Installation</h3>
+          <p class="service-desc">IP and analog camera systems for homes, offices, and commercial properties with remote viewing capability.</p>
+        </div>
+
+        <!-- 6. Printer Repair -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" />
+              <rect x="6" y="14" width="12" height="8" rx="1" />
+            </svg>
+          </div>
+          <h3 class="service-title">Printer Repair</h3>
+          <p class="service-desc">Inkjet and laser printer maintenance, paper jam fixes, head cleaning, and driver troubleshooting.</p>
+        </div>
+
+        <!-- 7. Windows Installation -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 21V9" />
+            </svg>
+          </div>
+          <h3 class="service-title">Windows Installation</h3>
+          <p class="service-desc">Clean OS installation, driver setup, activation, and essential software configuration for any PC.</p>
+        </div>
+
+        <!-- 8. Data Recovery -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="17 8 12 3 7 8" />
+              <line x1="12" y1="3" x2="12" y2="15" />
+            </svg>
+          </div>
+          <h3 class="service-title">Data Recovery</h3>
+          <p class="service-desc">Recovery of lost files, photos, and documents from failed hard drives, SSDs, and corrupted storage.</p>
+        </div>
+
+        <!-- 9. Virus Removal -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="service-title">Virus Removal</h3>
+          <p class="service-desc">Deep malware scanning and removal, system hardening, and security software installation to keep you safe.</p>
+        </div>
+
+        <!-- 10. Hardware Upgrades -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h12l4 6-10 13L2 9z" />
+              <path d="M11 3 8 9l4 13 4-13-3-6" />
+              <path d="M2 9h20" />
+            </svg>
+          </div>
+          <h3 class="service-title">Hardware Upgrades</h3>
+          <p class="service-desc">RAM, SSD, and GPU upgrades to breathe new life into aging computers and dramatically boost performance.</p>
+        </div>
+
+        <!-- 11. IT Consulting -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3 class="service-title">IT Consulting</h3>
+          <p class="service-desc">Strategic technology advisory for businesses — infrastructure planning, procurement guidance, and vendor selection.</p>
+        </div>
+
+        <!-- 12. Website Development -->
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+          </div>
+          <h3 class="service-title">Website Development</h3>
+          <p class="service-desc">Modern, responsive websites for businesses — from company profiles to e-commerce and web applications.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       WHY CHOOSE CAROLINATECH
+       ═══════════════════════════════════════════════════════ -->
+  <section id="why">
+    <!-- Blue glowing line at top -->
+    <div class="why-top-glow"></div>
+    <!-- Ambient glow -->
+    <div class="why-bg-glow"></div>
+
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Our Advantage</span>
+        <h2 class="section-title light">Why Choose CarolinaTech</h2>
+        <p class="section-desc light">
+          We combine technical expertise with genuine care for every client, delivering results that
+          exceed expectations every time.
+        </p>
+      </div>
+
+      <div class="why-grid stagger">
+
+        <!-- 1 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3 class="why-title">Experienced Professionals</h3>
+          <p class="why-desc">Our certified technicians bring years of hands-on expertise across all major hardware and software platforms.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </div>
+          <h3 class="why-title">Fast Response</h3>
+          <p class="why-desc">We understand urgency. Quick turnaround times minimize downtime and get you back up and running fast.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </div>
+          <h3 class="why-title">Affordable Pricing</h3>
+          <p class="why-desc">Transparent, competitive pricing with no hidden fees. You always know exactly what you're paying for.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </div>
+          <h3 class="why-title">Customer Satisfaction</h3>
+          <p class="why-desc">Over 98% of our clients are fully satisfied. We don't leave until the job is done right — guaranteed.</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+            </svg>
+          </div>
+          <h3 class="why-title">On-site &amp; Remote Support</h3>
+          <p class="why-desc">Whether you need a technician on location or remote assistance, we're always reachable and ready to help.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT / CONTACT — SPLIT LAYOUT
+       ═══════════════════════════════════════════════════════ -->
+  <section id="about">
+    <div id="about-anchor" style="position:absolute;margin-top:-80px;"></div>
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- LEFT: About content -->
+        <div class="reveal-left">
+          <span class="about-eyebrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+            About CarolinaTech
+          </span>
+          <h2 class="about-title">Your Trusted IT Partner</h2>
+          <p class="about-desc">
+            CarolinaTech is a dedicated IT solutions provider committed to delivering reliable,
+            high-quality technology services for homes, businesses, and institutions. With a team
+            of certified technicians and years of field experience, we bring enterprise-level
+            expertise at accessible prices.
+          </p>
+          <p class="about-desc">
+            Our mission is simple: solve your technology problems efficiently, transparently,
+            and with the professionalism you deserve. From a single laptop repair to a full
+            office network buildout, we treat every project with equal care and precision.
+          </p>
+
+          <!-- Who we serve -->
+          <div class="about-icon-grid">
+            <div class="about-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+              Homes
+            </div>
+            <div class="about-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <path d="M9 22V12h6v10" />
+                <rect x="3" y="3" width="18" height="6" rx="1" />
+              </svg>
+              Businesses
+            </div>
+            <div class="about-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+              Offices
+            </div>
+            <div class="about-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+              Schools
+            </div>
+            <div class="about-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              Commercial
+            </div>
           </div>
         </div>
 
-        <div class="modal-checklist">
-          <span class="mc-title">What is included:</span>
-          <ul class="mc-list" id="modalChecklist">
-            <!-- Injected checklist items -->
+        <!-- RIGHT: Contact form card -->
+        <div class="reveal-right">
+          <div class="contact-card">
+            <h3 class="contact-card-title">Send Us a Request</h3>
+            <p class="contact-card-sub">We'll get back to you within 24 hours.</p>
+
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <!-- Web3Forms config (access_key injected via JS) -->
+              <input type="hidden" name="subject" value="New Inquiry from Carolina Tech Website">
+              <input type="hidden" name="from_name" value="Carolina Tech Website">
+              <input type="hidden" name="redirect" value="false">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="inputName">Full Name</label>
+                  <input class="form-input" type="text" id="inputName" name="name"
+                    placeholder="Juan dela Cruz" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inputEmail">Email Address</label>
+                  <input class="form-input" type="email" id="inputEmail" name="email"
+                    placeholder="you@email.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="inputPhone">Phone Number</label>
+                <input class="form-input" type="tel" id="inputPhone" name="phone"
+                  placeholder="+63 9XX XXX XXXX" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="selectService">Service Needed</label>
+                <select class="form-select" id="selectService" name="service">
+                  <option value="" disabled selected>Select a service…</option>
+                  <option value="computer-repair">Computer Repair</option>
+                  <option value="laptop-repair">Laptop Repair</option>
+                  <option value="network-setup">Network Setup</option>
+                  <option value="cabling">Structured Cabling</option>
+                  <option value="cctv">CCTV Installation</option>
+                  <option value="printer-repair">Printer Repair</option>
+                  <option value="windows">Windows Installation</option>
+                  <option value="data-recovery">Data Recovery</option>
+                  <option value="virus-removal">Virus Removal</option>
+                  <option value="hardware-upgrade">Hardware Upgrades</option>
+                  <option value="consulting">IT Consulting</option>
+                  <option value="web-development">Website Development</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="inputMessage">Message</label>
+                <textarea class="form-textarea" id="inputMessage" name="message" rows="4"
+                  placeholder="Describe your issue or project…"></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+                Send Request
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CTA BANNER
+       ═══════════════════════════════════════════════════════ -->
+  <section id="cta-banner">
+    <div class="cta-banner-glow"></div>
+    <div class="container">
+      <div class="reveal">
+        <h2>Need Professional IT Support?</h2>
+        <p>Let's solve your technology problems today.</p>
+        <a href="#about" class="btn-cta-white">
+          Get Free Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-logo">
+            <span class="logo-dot"></span>
+            Carolina<span style="color:var(--blue)">Tech</span>
+          </div>
+          <p class="footer-brand-desc">
+            Professional IT solutions for homes, businesses, offices, and schools.
+            Reliable. Affordable. Expert.
+          </p>
+          <div class="footer-socials">
+            <!-- Facebook -->
+            <a href="#" class="social-btn" aria-label="Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <!-- Messenger -->
+            <a href="#" class="social-btn" aria-label="Messenger" title="Messenger">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:jermaje@gmail.com" class="social-btn" aria-label="Email" title="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about-anchor">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#about">Contact</a></li>
           </ul>
         </div>
 
-        <button class="modal-action-btn" id="modalActionBtn">Book this Service &rarr;</button>
-      </div>
-    </div>
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Computer Repair</a></li>
+            <li><a href="#services">Laptop Repair</a></li>
+            <li><a href="#services">Network Setup</a></li>
+            <li><a href="#services">CCTV Installation</a></li>
+            <li><a href="#services">Printer Repair</a></li>
+            <li><a href="#services">Data Recovery</a></li>
+            <li><a href="#services">Website Development</a></li>
+          </ul>
+        </div>
 
-    <!-- Script Modules -->
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/scroll.js"></script>
-    <script src="assets/js/gallery.js"></script>
-    <script src="assets/js/faq.js"></script>
-    <script src="assets/js/counter.js"></script>
-    <script src="assets/js/main.js"></script>
+        <!-- Col 4: Contact -->
+        <div>
+          <h4 class="footer-col-title">Contact Information</h4>
+
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.9 19.79 19.79 0 0 1 1.61 3.27 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l1.27-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <a href="tel:+639496437357" style="color:inherit;">0949 643 7357 · Viber / WhatsApp / SMS / Call</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:jermaje@gmail.com" style="color:inherit;">jermaje@gmail.com</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Brgy. Carolina, Naga City, Camarines Sur</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <span>Mon – Sat: 8:00 AM – 6:00 PM</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#1877F2">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+            <a href="https://www.facebook.com/carolinatechnician" target="_blank" rel="noopener noreferrer"
+              style="color:inherit;">facebook.com/carolinatechnician</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0099FF">
+              <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.888 1.38 5.47 3.548 7.177V22l3.236-1.786A11.3 11.3 0 0 0 12 20.486c5.523 0 10-4.145 10-9.243S17.523 2 12 2zm1.05 12.444-2.543-2.715-4.965 2.715 5.465-5.8 2.604 2.715 4.904-2.715-5.465 5.8z" />
+            </svg>
+            <a href="https://m.me/carolinatechnician" target="_blank" rel="noopener noreferrer"
+              style="color:inherit;">m.me/carolinatechnician</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footerYear"></span> CarolinaTech. All rights reserved.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <script>
+    // Set footer year
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/main.js" defer></script>
+
 </body>
 
 </html>
