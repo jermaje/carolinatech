@@ -215,3 +215,137 @@
     border-bottom: none;
   }
 }
+
+/* ============================================================
+   CCTV MODAL — RESPONSIVE
+   ============================================================ */
+
+/* ── Tablet: ≤ 768px — tighten modal padding & 2-col packages */
+@media (max-width: 768px) {
+  .cctv-modal-overlay {
+    align-items: flex-end;   /* slide up from bottom like a sheet */
+    padding: 0;
+  }
+
+  .cctv-modal-panel {
+    border-radius: 20px 20px 0 0;
+    max-height: 92vh;
+    padding: 1.75rem 1.25rem 2rem;
+    /* slide up from bottom on mobile */
+    transform: translateY(40px) scale(1);
+  }
+
+  .cctv-modal-overlay.active .cctv-modal-panel {
+    transform: translateY(0) scale(1);
+  }
+
+  .cctv-pkg-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cctv-modal-title {
+    font-size: 1.1rem;
+  }
+
+  .cctv-modal-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .cctv-modal-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ── Mobile: ≤ 480px — single column packages */
+@media (max-width: 480px) {
+  .cctv-modal-panel {
+    padding: 1.5rem 1rem 2rem;
+    max-height: 95vh;
+  }
+
+  .cctv-pkg-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cctv-pkg-card {
+    padding: 1.1rem 1rem;
+  }
+
+  .cctv-pkg-price {
+    font-size: 1.05rem;
+  }
+
+  .cctv-modal-header {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Drag handle hint */
+  .cctv-modal-panel::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 99px;
+    margin: 0 auto 1.25rem;
+  }
+}
+
+/* ── Very small: ≤ 360px */
+@media (max-width: 360px) {
+  .cctv-pkg-price {
+    font-size: 0.95rem;
+  }
+
+  .cctv-modal-title {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   SERVICE CARD PKG NOTE BADGE — RESPONSIVE
+   ============================================================ */
+
+/* On 2-column grid (≤768px) badge stays top-right — fine as-is */
+
+/* On single-column cards (≤480px) reposition badge to
+   sit inline below the title, not floating top-right */
+@media (max-width: 480px) {
+  .service-card-pkg-note {
+    position: static;          /* take it out of absolute flow */
+    display: inline-flex;
+    margin-top: 0.6rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.62rem;
+    padding: 0.25rem 0.65rem;
+    align-self: flex-start;
+  }
+
+  /* Make the CCTV card a flex-col so badge flows naturally */
+  .service-card--cctv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Keep the icon first, then title/desc stay in normal order */
+  .service-card--cctv .service-icon  { order: 1; }
+  .service-card--cctv .service-title { order: 2; }
+  .service-card--cctv .service-card-pkg-note { order: 3; }
+  .service-card--cctv .service-desc  { order: 4; }
+}
+
+/* ── Footer contact icons — ensure wrap on very small screens */
+@media (max-width: 360px) {
+  .footer-contact-icons {
+    gap: 0.4rem;
+  }
+
+  .footer-icon-link {
+    width: 34px;
+    height: 34px;
+  }
+}

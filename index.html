@@ -312,9 +312,14 @@
         </div>
 
         <!-- 5. CCTV Installation -->
-        <div class="service-card service-card--cctv reveal" id="cctv-card" onclick="document.getElementById('cctv-modal').classList.add('active')" role="button" tabindex="0" aria-label="CCTV Installation – click to view packages" onkeydown="if(event.key==='Enter')document.getElementById('cctv-modal').classList.add('active')">
+        <div class="service-card service-card--cctv reveal" id="cctv-card"
+          onclick="document.getElementById('cctv-modal').classList.add('active')" role="button" tabindex="0"
+          aria-label="CCTV Installation – click to view packages"
+          onkeydown="if(event.key==='Enter')document.getElementById('cctv-modal').classList.add('active')">
           <div class="service-card-pkg-note">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12l-8-8-8 8 8 8z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 12l-8-8-8 8 8 8z" />
+            </svg>
             Click for Packages
           </div>
           <div class="service-icon">
@@ -483,21 +488,6 @@
           <p class="why-desc">We understand urgency. Quick turnaround times minimize downtime and get you back up and
             running fast.</p>
         </div>
-
-        <!-- 3 -->
-        <div class="why-card reveal">
-          <div class="why-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="1" x2="12" y2="23" />
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
-          </div>
-          <h3 class="why-title">Affordable Pricing</h3>
-          <p class="why-desc">Transparent, competitive pricing with no hidden fees. You always know exactly what you're
-            paying for.</p>
-        </div>
-
         <!-- 4 -->
         <div class="why-card reveal">
           <div class="why-icon">
@@ -843,22 +833,27 @@
   <!-- ═══════════════════════════════════════════════════════
        CCTV PACKAGES MODAL
        ═══════════════════════════════════════════════════════ -->
-  <div id="cctv-modal" class="cctv-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cctv-modal-title" onclick="if(event.target===this)this.classList.remove('active')">
+  <div id="cctv-modal" class="cctv-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cctv-modal-title"
+    onclick="if(event.target===this)this.classList.remove('active')">
     <div class="cctv-modal-panel">
 
       <!-- Close button -->
-      <button class="cctv-modal-close" onclick="document.getElementById('cctv-modal').classList.remove('active')" aria-label="Close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      <button class="cctv-modal-close" onclick="document.getElementById('cctv-modal').classList.remove('active')"
+        aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
         </svg>
       </button>
 
       <!-- Header -->
       <div class="cctv-modal-header">
         <div class="cctv-modal-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m23 7-7 5 7 5V7z"/>
-            <rect x="1" y="5" width="15" height="14" rx="2"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m23 7-7 5 7 5V7z" />
+            <rect x="1" y="5" width="15" height="14" rx="2" />
           </svg>
         </div>
         <div>
@@ -952,14 +947,23 @@
 
       <!-- Disclaimer -->
       <p class="cctv-modal-note">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
         TV monitors are <strong>not included</strong> in these packages.
       </p>
 
       <!-- CTA -->
-      <a href="#about" class="cctv-modal-cta" onclick="document.getElementById('cctv-modal').classList.remove('active')">
+      <a href="#about" class="cctv-modal-cta"
+        onclick="document.getElementById('cctv-modal').classList.remove('active')">
         Inquire Now
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
       </a>
 
     </div>
@@ -970,7 +974,7 @@
     document.getElementById('footerYear').textContent = new Date().getFullYear();
 
     // Close CCTV modal on Escape key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         document.getElementById('cctv-modal').classList.remove('active');
       }
