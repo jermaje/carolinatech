@@ -131,7 +131,8 @@
 }
 
 /* Ripple Effect */
-.btn .ripple-circle {
+.btn .ripple-circle,
+.nav-cta .ripple-circle {
   position: absolute;
   border-radius: 50%;
   background: rgba(255,255,255,0.3);
@@ -154,6 +155,8 @@
   transition: all var(--t-base) var(--ease);
   white-space: nowrap;
   box-shadow: 0 2px 12px rgba(37,99,235,0.3);
+  position: relative;
+  overflow: hidden;
 }
 
 .nav-cta:hover {
