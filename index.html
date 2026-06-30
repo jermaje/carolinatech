@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CarolinaTech — Professional IT Solutions for Homes & Businesses</title>
   <meta name="description"
-    content="CarolinaTech delivers trusted computer repair, networking, CCTV installation, printer repair, web development, and complete IT solutions for homes and businesses." />
+    content="CarolinaTech delivers trusted computer repair, networking, CCTV installation, printer repair, and complete IT solutions for homes and businesses." />
   <meta name="keywords"
-    content="IT solutions, computer repair, networking, CCTV installation, printer repair, web development, data recovery, virus removal, hardware upgrade, IT consulting" />
+    content="IT solutions, computer repair, networking, CCTV installation, printer repair, data recovery, hardware upgrade, IT consulting" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
@@ -75,10 +75,12 @@
     <canvas id="hero-canvas"
       style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
 
-    <!-- Right: hero image -->
-    <div class="hero-bg-image">
-      <img src="assets/images/hero-tech.jpg" alt="IT technician repairing a desktop computer with blue lighting"
+    <!-- Right: hero image slideshow -->
+    <div class="hero-bg-image" id="heroSlideshow">
+      <img src="assets/images/slide1.png" class="hero-slide active" alt="IT technician repairing a desktop computer with blue lighting"
         loading="eager" />
+      <img src="assets/images/slide2.jpg" class="hero-slide" alt="IT professional providing on-site support"
+        loading="lazy" />
       <div class="hero-blue-glow"></div>
     </div>
 
@@ -377,19 +379,7 @@
             corrupted storage.</p>
         </div>
 
-        <!-- 10. Virus Removal -->
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <path d="m9 12 2 2 4-4" />
-            </svg>
-          </div>
-          <h3 class="service-title">Virus Removal</h3>
-          <p class="service-desc">Deep malware scanning and removal, system hardening, and security software
-            installation to keep you safe.</p>
-        </div>
+
 
         <!-- 11. Hardware Upgrades -->
         <div class="service-card reveal">
@@ -648,10 +638,8 @@
                   <option value="windows">Windows Installation</option>
                   <option value="software-installation">Software Installation &amp; Support</option>
                   <option value="data-recovery">Data Recovery</option>
-                  <option value="virus-removal">Virus Removal</option>
                   <option value="hardware-upgrade">Hardware Upgrades</option>
                   <option value="consulting">IT Consulting</option>
-                  <option value="web-development">Website Development</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -740,7 +728,6 @@
             <li><a href="#services">Printer Repair</a></li>
             <li><a href="#services">Software Installation</a></li>
             <li><a href="#services">Data Recovery</a></li>
-            <li><a href="#services">Website Development</a></li>
           </ul>
         </div>
 

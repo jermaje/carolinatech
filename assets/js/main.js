@@ -436,3 +436,69 @@
     if (e.key === 'Escape') closeBubble();
   });
 })();
+
+/* ─────────────────────────────────────────────────────────
+   10. HERO SLIDESHOW
+   ───────────────────────────────────────────────────────── */
+(function initHeroSlideshow() {
+  const container = document.getElementById('heroSlideshow');
+  if (!container) return;
+
+  // Start with slides already in HTML
+  const loadedSlides = Array.from(container.querySelectorAll('.hero-slide'));
+  let slideIndex = loadedSlides.length + 1; // start probing for slide3
+
+  function probeNextSlide() {
+    const exts = ['.jpg', '.png', '.jpeg'];
+    let extIndex = 0;
+
+    function tryLoad() {
+      if (extIndex >= exts.length) {
+        // No more images found, start the slideshow
+        startSlideshow();
+        return;
+      }
+      
+      const img = new Image();
+      img.src = `assets/images/slide${slideIndex}${exts[extIndex]}`;
+      
+      img.onload = () => {
+        img.className = 'hero-slide';
+        img.alt = `Hero Slide ${slideIndex}`;
+        img.loading = 'lazy';
+        
+        // Insert before the glow overlay
+        const glow = container.querySelector('.hero-blue-glow');
+        if (glow) {
+          container.insertBefore(img, glow);
+        } else {
+          container.appendChild(img);
+        }
+        loadedSlides.push(img);
+        
+        slideIndex++;
+        probeNextSlide();
+      };
+      
+      img.onerror = () => {
+        extIndex++;
+        tryLoad();
+      };
+    }
+
+    tryLoad();
+  }
+
+  function startSlideshow() {
+    if (loadedSlides.length <= 1) return;
+    let currentIndex = 0;
+    setInterval(() => {
+      loadedSlides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % loadedSlides.length;
+      loadedSlides[currentIndex].classList.add('active');
+    }, 5000);
+  }
+
+  // Begin scanning for additional images
+  probeNextSlide();
+})();
