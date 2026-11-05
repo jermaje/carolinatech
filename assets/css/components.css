@@ -63,6 +63,39 @@
 }
 
 /* ── Buttons ─────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 1000;
+  background: var(--white);
+  color: var(--black);
+  padding: 0.75rem 1rem;
+  border-radius: var(--r-md);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.15);
+  transition: top var(--t-base) var(--ease);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(96, 165, 250, 0.95);
+  outline-offset: 3px;
+}
+
+section[id],
+[id] {
+  scroll-margin-top: 110px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -174,6 +207,15 @@
   position: relative;
   cursor: default;
   overflow: hidden;
+  isolation: isolate;
+}
+
+.service-card:focus-visible,
+.service-card--cctv:focus-visible {
+  outline: 3px solid rgba(96, 165, 250, 0.9);
+  outline-offset: 4px;
+  transform: translateY(-6px);
+  box-shadow: 0 22px 55px rgba(37, 99, 235, 0.18);
 }
 
 /* Clickable CCTV variant */
@@ -206,6 +248,15 @@
   50%       { box-shadow: 0 2px 18px rgba(37,99,235,0.65); }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Image reveal layer */
 .svc-bg {
   position: absolute;
@@ -235,10 +286,28 @@
   z-index: 1;
 }
 
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(37,99,235,0.05), rgba(37,99,235,0.9), rgba(14,165,233,0.9), rgba(37,99,235,0.05));
+  transform: scaleX(0.15);
+  transform-origin: left;
+  opacity: 0;
+  transition: transform var(--t-base) var(--ease), opacity var(--t-base) var(--ease);
+}
+
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 60px rgba(0,0,0,0.18), 0 0 0 1px rgba(37,99,235,0.25);
   border-color: rgba(37,99,235,0.35);
+}
+
+.service-card:hover::after,
+.service-card:focus-visible::after {
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 .service-card:hover .svc-bg {

@@ -139,33 +139,98 @@
   window.addEventListener('scroll', updateActiveLink, { passive: true });
 
   // Hamburger toggle
+  function setMenuState(isOpen) {
+    hamburger.classList.toggle('active', isOpen);
+    navLinks.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+      const isOpen = !navLinks.classList.contains('open');
+      setMenuState(isOpen);
     });
 
     // Close on link click
     navItems.forEach(a => {
       a.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-        document.body.style.overflow = '';
+        setMenuState(false);
       });
     });
 
     // Close on outside click
     document.addEventListener('click', e => {
       if (!navbar.contains(e.target) && navLinks.classList.contains('open')) {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-        document.body.style.overflow = '';
+        setMenuState(false);
       }
     });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        setMenuState(false);
+      }
+    });
+
+    hamburger.setAttribute('aria-controls', 'navLinks');
+    hamburger.setAttribute('aria-expanded', 'false');
   }
 })();
 
+
+/* ─────────────────────────────────────────────────────────
+   4. COUNTERS
+   ───────────────────────────────────────────────────────── */
+(function initCounters() {
+  const counters = document.querySelectorAll('.stat-value');
+  if (!counters.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const formatValue = value => new Intl.NumberFormat('en-US').format(value);
+
+  const animateCounter = (el, callback) => {
+    const target = Number(el.dataset.target || 0);
+    if (prefersReducedMotion) {
+      el.textContent = formatValue(target);
+      callback();
+      return;
+    }
+
+    const duration = 1400;
+    const start = performance.now();
+
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * eased);
+      el.textContent = formatValue(current);
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        el.textContent = formatValue(target);
+        callback();
+      }
+    }
+
+    requestAnimationFrame(tick);
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      observer.unobserve(el);
+      animateCounter(el, () => {});
+    });
+  }, { threshold: 0.35 });
+
+  counters.forEach(counter => {
+    counter.textContent = '0';
+    observer.observe(counter);
+  });
+})();
 
 /* ─────────────────────────────────────────────────────────
    4. SCROLL REVEAL
