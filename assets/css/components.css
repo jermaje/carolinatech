@@ -33,7 +33,7 @@
 }
 
 .section-title {
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-size: clamp(1.9rem, 4vw, 3rem);
   font-weight: 800;
   color: var(--black);
   line-height: 1.15;
@@ -48,7 +48,7 @@
 .section-desc {
   font-size: 1.0625rem;
   color: var(--gray-text);
-  max-width: 560px;
+  max-width: 610px;
   margin: 0 auto;
   line-height: 1.75;
 }
@@ -103,8 +103,8 @@ section[id],
   gap: 0.5rem;
   font-weight: 600;
   font-size: 0.9375rem;
-  padding: 0.875rem 2rem;
-  border-radius: var(--r-md);
+  padding: 0.875rem 1.6rem;
+  border-radius: var(--r-full);
   cursor: pointer;
   transition: all var(--t-base) var(--ease);
   position: relative;
@@ -158,9 +158,9 @@ section[id],
 }
 
 .btn-lg {
-  padding: 1.0625rem 2.5rem;
-  font-size: 1.0625rem;
-  border-radius: var(--r-lg);
+  padding: 1rem 1.65rem;
+  font-size: 1rem;
+  border-radius: var(--r-full);
 }
 
 /* Ripple Effect */
@@ -181,7 +181,7 @@ section[id],
   gap: 0.4rem;
   font-size: 0.875rem;
   font-weight: 600;
-  padding: 0.625rem 1.375rem;
+  padding: 0.7rem 1.25rem;
   border-radius: var(--r-full);
   background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
   color: var(--white);
@@ -199,10 +199,11 @@ section[id],
 
 /* ── Service Card ────────────────────────────────────────── */
 .service-card {
-  background: var(--white);
+  background: #fff;
   border: 1px solid var(--gray-border);
   border-radius: var(--r-lg);
-  padding: 2rem 1.75rem;
+  padding: 1.75rem;
+  box-shadow: 0 8px 26px rgba(20, 38, 70, 0.035);
   transition: all var(--t-slow) var(--ease);
   position: relative;
   cursor: default;
@@ -335,17 +336,17 @@ section[id],
 }
 
 .service-icon {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--gray-border);
-  border-radius: var(--r-md);
-  color: var(--gray-text);
-  margin-bottom: 1.25rem;
+  border: 1px solid rgba(40, 120, 240, 0.16);
+  border-radius: 15px;
+  color: var(--blue);
+  margin-bottom: 1.1rem;
   transition: all var(--t-base) var(--ease);
-  background: var(--gray-light);
+  background: var(--blue-dim);
   position: relative;
   z-index: 1;
 }
@@ -357,10 +358,10 @@ section[id],
 }
 
 .service-title {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--black);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
   position: relative;
   z-index: 1;
 }
@@ -378,7 +379,7 @@ section[id],
   background: var(--dark-card);
   border: 1px solid var(--dark-border);
   border-radius: var(--r-lg);
-  padding: 2rem 1.75rem;
+  padding: 1.75rem 1.5rem;
   text-align: center;
   transition: all var(--t-slow) var(--ease);
   position: relative;
@@ -530,7 +531,7 @@ section[id],
   align-items: center;
   gap: 0.625rem;
   padding: 0.625rem 1rem;
-  background: var(--gray-light);
+  background: #f7f9fc;
   border: 1px solid var(--gray-border);
   border-radius: var(--r-md);
   font-size: 0.8125rem;
@@ -553,10 +554,11 @@ section[id],
 
 /* ── Contact Form Card ───────────────────────────────────── */
 .contact-card {
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+  background: linear-gradient(145deg, #101d31 0%, #0b1423 100%);
   border-radius: var(--r-xl);
   padding: clamp(2rem, 5vw, 2.75rem);
-  box-shadow: 0 20px 60px rgba(37,99,235,0.35), 0 4px 20px rgba(0,0,0,0.15);
+  border: 1px solid rgba(40, 120, 240, 0.2);
+  box-shadow: 0 24px 70px rgba(14, 30, 55, 0.15);
   position: relative;
   overflow: hidden;
 }
@@ -569,7 +571,7 @@ section[id],
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.06);
+  background: rgba(40, 120, 240, 0.1);
   pointer-events: none;
 }
 
@@ -604,13 +606,18 @@ section[id],
 .form-textarea {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: rgba(255,255,255,0.12);
-  border: 1.5px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.18);
   border-radius: var(--r-md);
   color: var(--white);
   font-size: 0.9375rem;
   transition: all var(--t-base) var(--ease);
   backdrop-filter: blur(8px);
+  cursor: text;
+}
+
+.form-select {
+  cursor: pointer;
 }
 
 .form-input::placeholder,
@@ -626,9 +633,9 @@ section[id],
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
-  border-color: rgba(255,255,255,0.6);
-  background: rgba(255,255,255,0.18);
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
+  border-color: #82b4ff;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 0 3px rgba(40,120,240,0.25);
 }
 
 .form-textarea {
@@ -646,10 +653,10 @@ section[id],
   width: 100%;
   margin-top: 0.5rem;
   background: var(--white);
-  color: var(--blue);
+  color: var(--blue-dark);
   border: none;
   padding: 0.9375rem;
-  border-radius: var(--r-md);
+  border-radius: var(--r-full);
   font-weight: 700;
   font-size: 0.9375rem;
   cursor: pointer;
@@ -928,6 +935,7 @@ section[id],
   background: none;
   border: none;
   z-index: 200;
+  border-radius: 10px;
 }
 
 .hamburger span {

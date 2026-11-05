@@ -4,25 +4,33 @@
 
 :root {
   /* ── Core ───────────────────────────────────────────────── */
-  --black:         #0B0B0B;
+  --black:         #0B1220;
   --white:         #FFFFFF;
 
   /* ── Accent Blues ───────────────────────────────────────── */
-  --blue:          #2563EB;
-  --blue-dark:     #1D4ED8;
-  --blue-dim:      rgba(37, 99, 235, 0.12);
-  --blue-glow:     rgba(37, 99, 235, 0.35);
+  --blue:          #2878F0;
+  --blue-dark:     #1558C0;
+  --blue-dim:      rgba(40, 120, 240, 0.1);
+  --blue-glow:     rgba(40, 120, 240, 0.3);
 
   /* ── Neutrals ───────────────────────────────────────────── */
-  --gray-light:    #F8FAFC;
-  --gray-border:   #E5E7EB;
-  --gray-text:     #64748B;
-  --gray-mid:      #94A3B8;
+  --gray-light:    #F4F7FB;
+  --gray-border:   #E1E7F0;
+  --gray-text:     #536278;
+  --gray-mid:      #9BAAC0;
 
   /* ── Dark Section ───────────────────────────────────────── */
-  --dark-surface:  #111827;
-  --dark-card:     #1F2937;
-  --dark-border:   rgba(255,255,255,0.08);
+  --dark-surface:  #0B1220;
+  --dark-card:     #121D2E;
+  --dark-border:   rgba(255,255,255,0.09);
+
+  /* ── Legacy layout tokens ───────────────────────────────── */
+  --border:        var(--gray-border);
+  --surface:       var(--white);
+  --text:          var(--black);
+  --muted:         var(--gray-text);
+  --accent:        var(--blue);
+  --font-head:     var(--font);
 
   /* ── Typography ─────────────────────────────────────────── */
   --font:          'Inter', system-ui, sans-serif;
@@ -35,12 +43,12 @@
   --shadow-card:   0 2px 16px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
 
   /* ── Spacing ─────────────────────────────────────────────── */
-  --section-pad:   clamp(3rem, 6vw, 5rem);
-  --container:     1200px;
+  --section-pad:   clamp(4.5rem, 8vw, 7rem);
+  --container:     1240px;
 
   /* ── Radius ──────────────────────────────────────────────── */
   --r-sm:   8px;
-  --r-md:   16px;
+  --r-md:   14px;
   --r-lg:   20px;
   --r-xl:   28px;
   --r-full: 9999px;

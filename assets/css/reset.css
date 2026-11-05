@@ -44,7 +44,14 @@ button, input, select, textarea {
   border: none;
   outline: none;
   background: none;
+}
+
+button, select {
   cursor: pointer;
+}
+
+input, textarea {
+  cursor: text;
 }
 
 h1, h2, h3, h4, h5, h6 {
